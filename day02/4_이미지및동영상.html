@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <p>
+        상대경로 vs 절대경로
+        1. 상대경로: 현재 문서(위치) 기준으로 상대적인 경로
+        - ./ 또는 생략 : 현재 위치
+        - ../ : 현재 위치의 상위 위치로 한번 이동
+        - ../../ : 현재 위치에서 두번 상위 위치로 이동
+        - ../폴더명/파일명 : 현재 위치에서 상위 위치로 이동후 폴더명으로 이동
+        2. 절대경로:
+    </p>
+    <h1> 이미지 마크업 1. src="사진경로" 속성 </h1>
+    <img src="./chick.jpg" />
+    <img src="../chick.jpg" />
+    <img src="../day03/chick.jpg" />
+
+    <!-- 절대경로 1. 서버기준 2. 로컬기준 -->
+    <!-- 안나옴 --> <img src="C:\Users\tj-bu-703-17\Documents\workspace\day02\chick.jpg" />
+    <img src="http://192.168.30.239:5500/day02/chick.jpg" />
+
+    <h1>오디오 마크업: 1. src="파일경로" 2.controls 3.autoplay(브라우저 정책에 따라 금지->muted) 4. muted(음소거)</h1>
+    <audio src="audio.mp3" controls autoplay></audio>
+    <h1>비디오 마크업: </h1>
+    <video src="video.mp4" controls autoplay muted></video>
+
+    <h1>외부 멀티미디어 마크업</h1>
+    <h2>유튜브 영상</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/yfP87sVfWQU?si=J_m-LWbk3P3Yo_Lf"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <h2>구글 지도</h2>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3162.5696039925424!2d126.97473359916687!3d37.5652028355002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca28d3199c531%3A0x7a2d35df0efd2d8!2z642V7IiY6raB!5e0!3m2!1sko!2skr!4v1715136835243!5m2!1sko!2skr"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
+</body>
+
+</html>
