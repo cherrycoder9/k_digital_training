@@ -16,10 +16,15 @@
     -->
     <p>문단 구역</p>
 
-    <h4 class="구역1">제목 구역</h4>
+    <h4 class="구역1">제목4 구역</h4>
 
     <div class="구역2">박스 구역</div>
     <div class="구역2"><img src="./chick.jpg"></div>
+
+    <div class="구역3">박스 구역3</div>
+    <div class="구역4">박스 구역4</div>
+    <div class="구역5">박스 구역5</div>
+    <div class="구역6">박스 구역6</div>
 
     <ol>
         <li>목록1</li>
@@ -34,6 +39,42 @@
     <form>
         <input />
     </form>
+
+    <!--
+        div(division) vs span : 구역/레이아웃 잡을때 
+            - 모든 마크업들은 CSS 기본적으로 적용된 상태
+            - div 와 span 두 마크업은 CSS 기본값이 거의 없는 마크업 
+
+            1. <div>
+                display: block              한줄을 차지한 배치 / 사이즈 적용 가능
+                display: inline-block;      한줄에 포함된 배치 / 사이즈 적용 가능
+                display: none;              표시 안함 
+                한줄이 차지된 배치
+                대표마크업: div, h1~h6, p, ul, ol
+            2. <span>
+                display: inline
+                한줄에 포함된 배치 
+                대표마크업: span, a, img
+                사이즈 적용 불가능 
+
+               
+    -->
+
+    <div>div 1</div>
+    <div>div 2</div>
+    <span>span 1</span>
+    <span>span 2</span>
+
+    <div>글자1 <span class="s1">s1 inline</span> 글자2</div>
+    <div>글자1 <span class="s2">s2 inline</span> 글자2</div>
+    <div>글자1 <span class="s3">s3 inline</span> 글자2</div>
+    <div>글자1 <span class="s4">s4 inline</span> 글자2</div>
+
+    <div>글자1 <div class="s1">s1 inline</div> 글자2</div>
+    <div>글자1 <div class="s2">s2 inline</div> 글자2</div>
+    <div>글자1 <div class="s3">s3 inline</div> 글자2</div>
+    <div>글자1 <div class="s4">s4 inline</div> 글자2</div>
+
 </body>
 
 </html>

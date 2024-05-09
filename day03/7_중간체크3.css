@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'RIDIBatang';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 기본 여백 제거 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    font-family: 'RIDIBatang';
+    background-color: pink;
+    text-align: center;
+}
+
+.contentsMain {
+    width: 400px;
+    height: 800px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.name {
+    font-size: 20px;
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    border: 5px solid white;
+    border-radius: 30px;
+}
+
+.picture {
+    width: 200px;
+    height: 250px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 150px;
+
+}
+
+.intro {
+    margin-top: 20px;
+    text-align: center;
+    padding: 30px;
+
+}
+
+.clickMenu {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px;
+    background-color: rgb(92, 161, 189);
+    margin-bottom: 30px;
+    border-radius: 15px;
+}
