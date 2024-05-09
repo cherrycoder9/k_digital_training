@@ -1,0 +1,46 @@
+/* 구역 확인용 */
+* {
+    border: 3px solid pink;
+}
+
+html {
+    border: 1px solid red;
+}
+
+body {
+    border: 2px solid blue;
+}
+
+.구역1 {
+    /* 구역 데투리: 선굵기 선모양 선색상 */
+    border: 1px solid black;
+}
+
+.구역2 {
+    /* 선모양: solid 실선, dotted 점선, dashed 파선 */
+    border-top: 1px solid orange;
+    border-right: 2px dotted skyblue;
+    border-bottom: 3px dashed black;
+    border-left: 4px double green;
+
+    /* 테두리: 둥근 모서리 */
+    border-radius: 30px;
+
+    /* 구역 그림자: x축 y축 흐림정도 색상 */
+    box-shadow: 5px 5px 5px orange;
+
+    /* 구역정렬아님, 구역안에 있는 컨텐츠 정렬임 */
+    text-align: center;
+
+    /* 구역 사이즈 가로세로 */
+    width: 300px;
+    height: 300px;
+}
+
+.구역2 img {
+    width: 100px;
+}
+
+form>input {
+    width: 500px;
+}
