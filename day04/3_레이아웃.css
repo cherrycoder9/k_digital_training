@@ -1,0 +1,41 @@
+* {
+    border: 2px solid red;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+#wrap {
+    width: 1280px;
+    margin: 50px auto;
+}
+
+#header {
+    background-color: yellowgreen;
+    height: 100px;
+}
+
+#main {
+    background-color: aqua;
+    /* 자식 요소들의 배치 방법 */
+    display: flex;
+    /* 기본값임 생략 가능 */
+    flex-direction: row;
+    /* 기본값임 생략가능 */
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    height: 500px;
+}
+
+#footer {
+    background-color: black;
+    color: white;
+    height: 100px;
+}
+
+#contents {
+    width: 900px;
+}
+
+#aside {
+    width: 300px;
+}
