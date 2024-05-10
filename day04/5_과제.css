@@ -1,0 +1,223 @@
+/* 레이아웃 초기화 및 테스트 */
+* {
+    padding: 0;
+    margin: 0;
+    /* border: 1px solid red; */
+}
+
+/* ======= 헤더 시작 ======= */
+/* ======= 헤더 공통 ======= */
+#headerWrap {
+    width: 1280px;
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+}
+
+#headerWrap li {
+    list-style-type: none;
+}
+
+
+/* ======= 헤더 좌측 ======= */
+#headerLogo {
+    width: 200px;
+}
+
+
+/* ======= 헤더 중앙 ======= */
+#headerMenu {
+    display: flex;
+    width: 550px;
+    justify-content: space-between;
+    font-size: 20px;
+    /* border: 2px solid blue; */
+}
+
+
+/* ======= 헤더 우측 ======= */
+#headerLink {
+    display: flex;
+    width: 230px;
+    justify-content: space-between;
+}
+
+.snsIconDeco {
+    margin: 0 10px;
+    width: 50px;
+    height: 35px;
+    border-radius: 30px;
+    border: 3px solid black;
+    text-align: center;
+}
+
+/* ======= 헤더 끝 ======= */
+
+
+
+/* ======= 푸터 시작 ======= */
+/* 기본 여백 제거, 글머리 제거 */
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+/* 구역 사이즈 :테두리 기준 */
+* {
+    box-sizing: border-box;
+}
+
+/* 확인용 
+*{
+    border: 1px solid red;
+}*/
+
+
+#content {
+    width: 1280px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.drink {
+    width: 500px;
+    padding: 20px;
+    background-color: #fff6f8;
+}
+
+.mainContent {
+    width: 500px;
+}
+
+ul {
+    padding: 40px;
+}
+
+.menuName {
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+
+.explanation {
+    border-bottom: 1px solid #eeeeee;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.include {
+    font-size: 20px;
+}
+
+.include>p {
+    line-height: 170%;
+}
+
+/* ======= 메인 끝 ======= */
+
+/* ======= 사이드바 시작 */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#content {
+    width: 1280px;
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+}
+
+
+#aside {
+    width: 250px;
+    font-size: 20px;
+    padding: 15px;
+}
+
+
+#aside>ul>li {
+    border: 2px solid yellow;
+    border-radius: 100px;
+    padding: 10px;
+    text-align: center;
+
+}
+
+
+li {
+    margin-bottom: 30px;
+}
+
+/* 사이드바 끝 */
+
+
+
+
+/* ======= 푸터 시작 ======= */
+* {
+    list-style-type: none;
+}
+
+@font-face {
+    font-family: 'TTHakgyoansimUndongjangL';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimUndongjangL.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+#footer {
+    margin: 0 auto;
+    width: 1280px;
+}
+
+#footline {
+    border-top: 3px solid #ffe80a;
+}
+
+#footlogo {
+    padding: 10px 0px;
+    width: 300px;
+    height: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+#footmain {
+    margin: 20px auto;
+    text-align: center;
+    justify-content: center;
+    width: 800px;
+    font-family: 'TTHakgyoansimUndongjangL';
+}
+
+#footend {
+    display: flex;
+    margin: 0 auto;
+}
+
+#footendleft {
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'TTHakgyoansimUndongjangL';
+}
+
+#toplogo {
+    width: 50px;
+    height: 50px;
+    background-color: #ffe80a;
+}
+
+/* ======= 푸터 끝 ======= */
