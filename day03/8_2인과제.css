@@ -1,0 +1,101 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* 기본 여백 제거 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 가운데 정렬 */
+body {
+    font-family: 'Pretendard-Regular';
+    text-align: center;
+}
+
+/* 버튼 일부 초기화 */
+.initColor {
+    background-color: unset;
+    border: unset;
+    padding-left: 10px;
+    color: grey;
+}
+
+html {
+    margin: 0 auto;
+}
+
+.kakaoLogo {
+    width: 150px;
+}
+
+.textColor {
+    color: grey;
+}
+
+.boxEdge {
+    width: 450px;
+    margin: 0 auto;
+    border: 1px solid grey;
+    padding: 50px;
+}
+
+li {
+    list-style: none;
+}
+
+.btnSize {
+    margin: 10px 10px 10px -270px;
+    text-align: left;
+    font-size: 17px;
+    width: 17px;
+    height: 17px;
+    vertical-align: middle;
+}
+
+.id,
+.password {
+    border: 0 solid grey;
+    border-bottom: 1px solid grey;
+
+}
+
+.id,
+.password,
+.login,
+.qrLogin {
+    width: 400px;
+    font-size: 20px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.login,
+.qrLogin {
+    border: 0 solid white;
+    color: rgb(34, 32, 32);
+    cursor: pointer;
+
+}
+
+.login {
+    background-color: rgb(245, 229, 1);
+}
+
+.alignRight {
+    text-align: right;
+    padding: 0 25px 0 0;
+}
+
+.join,
+.findPass,
+.findAcc {
+    text-align: center;
+    color: rgb(100, 99, 99);
+    cursor: pointer;
+    font-size: 11px;
+}
