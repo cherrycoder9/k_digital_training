@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 1px solid red;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+calculator {
+    display: flex;
+    width: 300px;
+    height: 500px;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.flexItem {
+    box-sizing: border-box;
+}
+
+#numDisplay {
+    padding: 0;
+}
+
+#subButton {
+    padding: 0;
+}
+
+#mainButton {
+    padding: 0;
+}
