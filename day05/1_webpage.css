@@ -1,0 +1,219 @@
+/* 
+    협업시 공통(모든페이지 길이 적용할 css)
+    1. 웹페이지 컨텐츠 전체 사이즈: pc(1000~1300)px: 1280px
+    2. 폰트
+    3. 색상테마 
+    4. 레이아웃
+*/
+
+
+* {
+    font-family: "맑은 고딕", "굴림";
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* 기본 css 세팅: 글꼴, 안쪽여백, 바깥여백, 구역사이즈 기준 */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 
+    이미지를 가운데 정렬하는 방법
+        #mainImg {display: block; margin 0 auto;}
+        #mainImg {
+            width: 100%; height: 300px; 
+            background-image: url("img/main_bg.png");; 
+            background-repeat: no-repeat;
+            background-position: center;
+*/
+
+/* 레이아웃 용 */
+#wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+#header,
+#content {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+/* ============= 헤더 ============= */
+#header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: center;
+}
+
+#topMenu,
+#mainMenu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* 상위선택자 > 하위선택자:  */
+#mainMenu>li {
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#mainImg {
+    margin: 30px 0;
+}
+
+/* ============= 본문 (왼쪽) ============= */
+#content {
+    display: flex;
+    justify-content: space-between;
+}
+
+#sidebar {
+    width: 20%;
+}
+
+#sidebar>h3 {
+    background-color: #0ca9a2;
+    color: antiquewhite;
+    font-size: 20px;
+    padding: 15px;
+}
+
+#sidebar>* {
+    padding: 10px;
+    line-height: 160%;
+}
+
+#sidebar>form {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#sidebar>form>.searchInput {
+    width: 70%;
+    height: 30px;
+    border-radius: 10px;
+    border: 3px solid rgb(36, 35, 35);
+}
+
+#sidebar>form>.searchBtn {
+    border-radius: 10px;
+    width: 20%;
+}
+
+h4 {
+    border-top: solid 4px rgb(63, 216, 3);
+    border-bottom: solid 3px rgb(216, 209, 209);
+    margin-top: 20px;
+}
+
+#mainContent {
+    width: 80%;
+    padding-left: 30px;
+}
+
+/* ============= 본문 (오른쪽) ============= */
+#mainContent {
+    display: flex;
+    justify-content: space-between;
+}
+
+#board {
+    width: 45%;
+    padding: 0 20px;
+}
+
+#cookingClass {
+    width: 50%;
+}
+
+#board>ul>li {
+    display: flex;
+    justify-content: space-between;
+}
+
+#cookingClass>ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+#cookingClass img {
+    width: 100%;
+}
+
+#board>h3,
+#cookingClass>h3 {
+    border-bottom: solid 4px rgb(63, 216, 3);
+    margin-bottom: 20px;
+    font-size: 22px;
+    padding: 10px;
+}
+
+
+#cookingClass>ul>li {
+    margin-bottom: 20px;
+}
+
+#board>h3:nth-last-child(2) {
+    margin-top: 50px;
+}
+
+/* ============= 푸터 ============= */
+#footer {
+    display: flex;
+    background-color: rgb(41, 41, 66);
+    height: 250px;
+    flex-direction: column;
+    color: aliceblue;
+    padding: 20px 0 0 0;
+    margin: 50px 0 0 0;
+    align-items: center;
+}
+
+#footerContent {
+    width: 1280px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+#footerTop,
+#footerBottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#footerTop {
+    /* padding: 0 25%; */
+    justify-content: flex-start;
+    margin: 20px 0;
+}
+
+#footerBottom {
+    /* padding: 0 14%; */
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+#footerTop>ul {
+    display: flex;
+    flex-direction: row;
+}
+
+#footerTop>ul>li {
+    padding: 0 35px 0 0;
+}

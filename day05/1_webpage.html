@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='1_webpage.css'>
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <div id="wrap"> <!-- <div>: 주로 레이아웃/구역 만들때 사용되는 마크업 display:block -->
+        <div id="header">
+            <div id="headerLeft">
+                <img src="1_img/logo.png">
+            </div>
+            <div id="headerRight">
+                <ul id="topMenu">
+                    <li>임세원님&nbsp;|</li>
+                    <li>&nbsp;로그아웃&nbsp;|</li>
+                    <li>&nbsp;정보수정</li>
+                </ul>
+                <ul id="mainMenu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">출석부</a></li>
+                    <li><a href="#">작품갤러리</a></li>
+                    <li><a href="#">게시판</a></li>
+                </ul>
+
+            </div>
+        </div> <!-- css선택자: id(페이지당 단일용) vs class(페이지당 복수용) -->
+        <img id="mainImg" src="1_img/main_bg.png">
+        <div id="content">
+            <div id="sidebar">
+                <h3>The 베이킹</h3>
+                <p>안녕하세요. 쿠키와 빵 만들기 정보를 공유하고 소통하는 공간입니다.</p>
+                <form>
+                    <input class="searchInput" type="text" />
+                    <input class="searchBtn" type="button" value="검색" />
+                </form>
+
+                <h4>베이킹 요리</h4>
+                <ul>
+                    <li>쿠키 만들기</li>
+                    <li>빵 만들기</li>
+                    <li>마카롱 만들기</li>
+                </ul>
+
+                <h4>최근 댓글</h4>
+                <ul>
+                    <li>쿠키 맛있어요</li>
+                    <li>빵 좋아요</li>
+                    <li>마카롱 추천!</li>
+                </ul>
+            </div>
+            <div id="mainContent">
+                <div id="board">
+                    <h3>알림</h3>
+                    <ul>
+                        <li>
+                            <div>쿠키 클래스 연기합니다</div>
+                            <div>09.30</div>
+                        </li>
+                        <li>
+                            <div>쿠키 클래스 연기합니다</div>
+                            <div>09.30</div>
+                        </li>
+                        <li>
+                            <div>쿠키 클래스 연기합니다</div>
+                            <div>09.30</div>
+                        </li>
+                        <li>
+                            <div>쿠키 클래스 연기합니다</div>
+                            <div>09.30</div>
+                        </li>
+                        <li>
+                            <div>쿠키 클래스 연기합니다</div>
+                            <div>09.30</div>
+                        </li>
+                    </ul>
+
+
+                    <h3>게시판</h3>
+                    <ul>
+                        <li>
+                            <div>쿠키 클래스 연기합니다</div>
+                            <div>09.30</div>
+                        </li>
+                        <li>
+                            <div>쿠키 클래스 연기합니다</div>
+                            <div>09.30</div>
+                        </li>
+                        <li>
+                            <div>쿠키 클래스 연기합니다</div>
+                            <div>09.30</div>
+                        </li>
+                        <li>
+                            <div>쿠키 클래스 연기합니다</div>
+                            <div>09.30</div>
+                        </li>
+                        <li>
+                            <div>쿠키 클래스 연기합니다</div>
+                            <div>09.30</div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="cookingClass">
+                    <h3>제빵 클래스</h3>
+                    <ul>
+                        <li>
+                            <img src="1_img/bread1.png">
+                            <p>도너츠 만들기 [3]</p>
+                            <p>23.06.13</p>
+                        </li>
+                        <li>
+                            <img src="1_img/bread2.png">
+                            <p>도너츠 만들기 [3]</p>
+                            <p>23.06.13</p>
+                        </li>
+                        <li>
+                            <img src="1_img/bread3.png">
+                            <p>도너츠 만들기 [3]</p>
+                            <p>23.06.13</p>
+                        </li>
+                        <li>
+                            <img src="1_img/bread4.png">
+                            <p>도너츠 만들기 [3]</p>
+                            <p>23.06.13</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="footerContent">
+                <div id="footerTop">
+                    <ul>
+                        <li>The베이킹소개</li>
+                        <li>개인정보처리방침</li>
+                        <li>저작권소개</li>
+                        <li>이용안내</li>
+                    </ul>
+                </div>
+                <div id="footerBottom">
+                    <div>
+                        <h3>문의전화</h3>
+                        <li>123-1234</li>
+                        <li>10:00~18:00 (Lunch 12:00~13:00)</li>
+                    </div>
+                    <div>
+                        <h3>The베이킹</h3>
+                        <li>주소: 경기도 안산시 한대앞역 123-1234</li>
+                        <li>전화: 010-1010-1234</li>
+                        <li>팩스: 010-1234-1234</li>
+                        <li>이메일: sdfkljdf@msdlsdf.com</li>
+                    </div>
+                    <div>
+                        <h3>입금정보</h3>
+                        <li>농협 123-12-1231414</li>
+                        <li>The베이킹</li>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
