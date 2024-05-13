@@ -194,7 +194,7 @@ h4 {
 #footerBottom {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 #footerTop {
