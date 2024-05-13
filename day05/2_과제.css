@@ -1,0 +1,63 @@
+/* =========== 공통 초기화 =========== */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* =========== 푸터 시작 =========== */
+#footer {
+    width: 1280px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    border-top: 1px solid rgb(190, 190, 190);
+    padding: 20px 0;
+    align-items: center;
+}
+
+#footer img {
+    margin-left: 10px;
+    width: 70px;
+    height: 70px;
+}
+
+.privacyPolicy {
+    background-color: rgb(190, 190, 190);
+    border-radius: 20px;
+    color: white;
+}
+
+.pointerInterface {
+    cursor: pointer;
+}
+
+#footerRight {
+    display: flex;
+    align-items: center;
+}
+
+
+#footerRight>select {
+    padding: 0 0 0 20px;
+    width: 200px;
+    height: 30px;
+    margin: 0 0 0 30px;
+}
+
+.familysiteBtn {
+    width: 50px;
+    height: 30px;
+    margin: 0 70px 0 10px;
+    background-color: rgb(3, 119, 61);
+    color: antiquewhite;
+}
