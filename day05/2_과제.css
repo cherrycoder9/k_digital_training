@@ -47,7 +47,7 @@ a {
 /* =========== 푸터 우측 레이아웃 =========== */
 #footerRight {
     display: flex;
-    align-items: centers;
+    align-items: center;
 }
 
 /* =========== 패밀리사이트 선택버튼 데코 =========== */
