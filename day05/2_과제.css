@@ -25,28 +25,32 @@ a {
     align-items: center;
 }
 
+/* =========== 하단 이미지 크기 조절 =========== */
 #footer img {
     margin-left: 10px;
     width: 70px;
     height: 70px;
 }
 
+/* =========== 개인정보처리방침 데코 =========== */
 .privacyPolicy {
     background-color: rgb(190, 190, 190);
     border-radius: 20px;
     color: white;
 }
 
+/* =========== a 태그에 커서 만들기 =========== */
 .pointerInterface {
     cursor: pointer;
 }
 
+/* =========== 푸터 우측 레이아웃 =========== */
 #footerRight {
     display: flex;
     align-items: center;
 }
 
-
+/* =========== 패밀리사이트 선택버튼 데코 =========== */
 #footerRight>select {
     padding: 0 0 0 20px;
     width: 200px;
@@ -54,6 +58,7 @@ a {
     margin: 0 0 0 30px;
 }
 
+/* =========== 패밀리 사이트 버튼 데코 =========== */
 .familysiteBtn {
     width: 50px;
     height: 30px;
