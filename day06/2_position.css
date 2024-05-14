@@ -1,0 +1,92 @@
+*{ 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#popup {
+    background-color: rgb(39, 180, 177);
+    color: white;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    align-content: center;
+    text-align: center;
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+    z-index: 1;
+}
+
+#header {
+    display: flex;
+    border-bottom: 2px solid grey;
+    background-color: white;
+    margin-top: 10px;
+    /* 해당 구역이 가려질 때 위치 고정 */
+    position: sticky;
+    top: 10px;
+    /* 다른 요소와 겹쳤을때 우선순위 */
+    z-index: 2;
+}
+
+#header > ul {
+    margin-left: 30px;
+    display: flex;
+}
+
+
+.wrap {
+    width: 500px;
+    height: 600px;
+    margin: 0 auto;
+    background-color: beige;
+    position: relative;
+    z-index: 0;
+    }
+
+.box {
+    background-color: yellow;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 100px;
+    height: 100px;
+    align-content: center;
+    text-align: center;
+}
+
+.box1 {
+    position:relative;
+    left: 200px;
+    top: 30px;
+}
+
+.box2 {
+    position: relative;
+    left: 50px;
+    top: 60px
+}
+
+.box3 {
+    position: relative;
+    left: 350px;
+    top: -40px
+}
+
+.box4 {
+    position: relative;
+    left: 50px;
+    top: 0px
+}
+
+.box5 {
+    position: relative;
+    left: 350px;
+    top: -100px
+}
+
+.box6 {
+    position: relative;
+    left: 200px;
+    top: -70px
+}

@@ -1,0 +1,82 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    border: 1px solid red;
+}
+
+.box2 {
+    background-color: red;
+    /* 포지션 변경: 상대위치, 본래 있던 위치가 기준점 */
+    position: relative;
+    /* 위치 */
+    top: 100px;
+    left: 100px;
+}
+
+.box5{
+    background-color: brown;
+    /* 절대위치: 부모 구역의 시작 위치가 기준임. 여기선 body */
+    position: absolute;
+    /* 위치 */
+    top: 100px;
+    left: 100px;
+}
+
+.box8 {
+    background-color: orange;
+    /* 정적위치: 기본값임 */
+    position: static;
+    /* 위치 속성 적용 안됨: top, left, right, bottom */
+    top: 50px;
+    left: 50px;
+}
+
+.box11 {
+    background-color: skyblue;
+    /* 화면에 위치고정, 디바이스, 모니터 기준 */
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 2;
+}
+
+.parent {
+    background-color: chartreuse;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.box14 {
+    background-color: aqua;
+    /* 가장 가까운 부모의 포지션의 relative 기준점 */
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    z-index: 3;
+}
+
+/* 
+    position: static;   기본값: 작성순서대로 배치(속성위치 사용할 수 없다)
+    position: relative; 상대위치: 자신의 본래 위치로부터 기준
+    position: absolute; 절대위치: 부모의 위치 기준(가장 가까운 relative 속성인 부모, 없으면 바디를 따라감)
+    position: fixed;    고정위치: 디바이스 화면에 위치 고정
+    position: sticky;          : 디바이스 화면으로부터 벗어나갔을 때만 위치고정
+    
+    - 속성위치
+        top: 윗변 기준에 +는 아래로 -는 위로 
+        bottom: 밑변 기준에 +는 위로 -는 아래로 
+        left: 왼쪽변 기준에 +는 오른쪽 -는 왼쪽 
+        right: 오른쪽변 기준에 +는 왼쪽 -는 오른쪽 
+
+    - 배치 우선순위 번호
+        z-index: 높을수록 z축 순서 지정 
+
+ */
