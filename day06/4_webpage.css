@@ -34,17 +34,18 @@ a {
     /* border: 1px solid red; */
 }
 
+/* 
 #header {
     height: 115px;
-}
+} */
 
-#content {
+/* #content {
     height: 1000px;
-}
+} */
 
-#footer {
+/* #footer {
     height: 200px;
-}
+} */
 
 /* ========= 1. 헤더 상단메뉴 ========= */
 ul#topMenu {
@@ -233,4 +234,77 @@ ul#topMenu {
 #items .price {
     text-decoration: line-through;
     color: #999999;
+}
+
+
+/* 팝업 */
+#popup {
+    position: fixed;
+    top: 30%;
+    right: 0px;
+}
+
+#popup img {
+    height: 30px;
+    opacity: 70%;
+}
+
+#popup>ul>li {
+    padding: 12px;
+    border: 1px solid #dbdbdb;
+    background: #f7f7f7;
+    position: relative;
+}
+
+#popup>ul>li>span {
+    position: absolute;
+    top: 18px;
+    right: 55px;
+    width: 80px;
+    height: 20px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    align-content: center;
+    display: none;
+}
+
+#popup>ul>li:hover .popupSub {
+    display: inline;
+}
+
+/* 푸터 */
+#footerTop {
+    background-color: rgb(243, 240, 240);
+    padding: 40px;
+}
+
+#footerTop>ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#footerTop>ul>li {
+    font-size: 15px;
+}
+
+#footerBottom {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    color: grey;
+}
+
+#footerBottom>ul>li {
+    font-size: 13px;
+    text-align: center;
+}
+
+#footer h3 {
+    font-size: 16px;
+}
+
+#footer h2 {
+    font-size: 19px;
 }
