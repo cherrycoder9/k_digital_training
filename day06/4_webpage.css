@@ -15,7 +15,7 @@ a {
     text-decoration: none;
 }
 
-/* 레이아웃용 CSS */
+/* ========= 레이아웃용 CSS ========= */
 #header {
     width: 100%;
 }
@@ -46,7 +46,7 @@ a {
     height: 200px;
 }
 
-/* 1. 헤더 상단메뉴 */
+/* ========= 1. 헤더 상단메뉴 ========= */
 ul#topMenu {
     display: flex;
     justify-content: flex-end;
@@ -65,7 +65,7 @@ ul#topMenu {
     padding: 0 15px;
 }
 
-/* 1. 헤더 하단메뉴 */
+/* ========= 1. 헤더 하단메뉴 ========= */
 #mainMenu {
     display: flex;
     justify-content: space-between;
@@ -143,29 +143,94 @@ ul#topMenu {
     position: sticky;
     /* 최상단 */
     top: 0px;
-    background-color: white;
-    /* 스티키 
+    /* 스티키 사용조건
         1. sticky: 상위 부모의 높이 사이즈 안에서 고정
            vs fixed: 특정 요소와 상관없이 디바이스 고정 
-    사용조건 */
+        2. top, right, left, bottom 위치 속성 1개 이상 필수!
+        3. 부모요소가 overflow 속성 사용금지
+    */
+    background-color: white;
+    /* 투명도 */
+    opacity: 80%;
 }
 
-/* 3. 메인 이미지 */
+/* ========= 3. 메인 이미지 ========= */
 #mainImg {
     width: 100%;
 }
 
-
-.contentWraper {
-    margin: 0 auto;
+/* ========= 4. 본문 ========= */
+#content>.title {
+    margin-top: 50px;
+    font-size: 17px;
+    text-align: center;
 }
 
-.contentWraper>ul {
+#content>.comment {
+    margin: 20px 0;
+    font-size: 13px;
+    text-align: center;
+    color: grey;
+}
+
+/* items(1600)가로사이즈 한줄에 4개씩 이므로 나누기 4하고 여백 조금 빼기  */
+#items>.item {
+    width: 350px;
+    margin: 30px 0;
+}
+
+#items {
     display: flex;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
+#items>.item>.itemImg {
+    width: 100%;
+}
 
-.contentWraper img {
-    width: 350px;
+#items .color>span {
+    width: 10px;
+    height: 10px;
+    /* span 마크업 기본값 display: inline */
+    /* 한줄 가로배치, 사이즈 적용됨 */
+    display: inline-block;
+    border: 1px solid #dbdbdb;
+}
+
+#items .colorReview {
+    display: flex;
+    justify-content: space-between;
+}
+
+#items .review {
+    color: #999999
+}
+
+#items .itemName {
+    margin: 5px 0px;
+}
+
+#items .itemName>.size {
+    font-size: 10px;
+    color: #999999;
+    margin: 2px 0;
+}
+
+#items .itemPrice {
+    position: relative;
+    margin: 5px 0;
+}
+
+#items .disc {
+    font-size: 15px;
+    color: red;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+#items .price {
+    text-decoration: line-through;
+    color: #999999;
 }
