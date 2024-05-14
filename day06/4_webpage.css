@@ -62,7 +62,7 @@ ul#topMenu {
     margin-right: 30px;
 }
 
-#topMenu > li > span {
+#topMenu>li>span {
     padding: 0 15px;
 }
 
@@ -78,13 +78,13 @@ ul#topMenu {
     width: 90%;
 }
 
-#mainMenu > ul {
+#mainMenu>ul {
     display: flex;
     font-weight: bold;
     width: 75%;
 }
 
-#mainMenu > ul > li {
+#mainMenu>ul>li {
     /* ... */
     height: 80px;
     width: 80px;
@@ -97,13 +97,13 @@ ul#topMenu {
     border-bottom: 1px solid black;
 }
 
-#searchBox > input {
+#searchBox>input {
     border: none;
     width: 120px;
     padding: 5px;
 }
 
-#searchBox > img {
+#searchBox>img {
     height: 15px;
 }
 
@@ -117,7 +117,7 @@ ul#topMenu {
 }
 
 /* 2-2 드롭메뉴 */
-#mainMenu > ul > li {
+#mainMenu>ul>li {
     position: relative;
 }
 
@@ -130,11 +130,11 @@ ul#topMenu {
     display: none;
 }
 
-#mainMenu .subMenu > li {
+#mainMenu .subMenu>li {
     margin: 15px;
 }
 
-#mainMenu > ul > li:hover .subMenu {
+#mainMenu>ul>li:hover .subMenu {
     display: block;
 }
 
@@ -161,13 +161,13 @@ ul#topMenu {
 }
 
 /* ========= 4. 본문 ========= */
-#content > .title {
+#content>.title {
     margin-top: 50px;
     font-size: 17px;
     text-align: center;
 }
 
-#content > .comment {
+#content>.comment {
     margin: 20px 0;
     font-size: 13px;
     text-align: center;
@@ -175,7 +175,7 @@ ul#topMenu {
 }
 
 /* items(1600)가로사이즈 한줄에 4개씩 이므로 나누기 4하고 여백 조금 빼기  */
-#items > .item {
+#items>.item {
     width: 350px;
     margin: 30px 0;
 }
@@ -186,11 +186,11 @@ ul#topMenu {
     flex-wrap: wrap;
 }
 
-#items > .item > .itemImg {
+#items>.item>.itemImg {
     width: 100%;
 }
 
-#items .color > span {
+#items .color>span {
     width: 10px;
     height: 10px;
     /* span 마크업 기본값 display: inline */
@@ -212,7 +212,7 @@ ul#topMenu {
     margin: 5px 0px;
 }
 
-#items .itemName > .size {
+#items .itemName>.size {
     font-size: 10px;
     color: #999999;
     margin: 2px 0;
@@ -248,14 +248,14 @@ ul#topMenu {
     opacity: 70%;
 }
 
-#popup > ul > li {
+#popup>ul>li {
     padding: 12px;
     border: 1px solid #dbdbdb;
     background: #f7f7f7;
     position: relative;
 }
 
-#popup > ul > li > span {
+#popup>ul>li>span {
     position: absolute;
     top: 18px;
     right: 55px;
@@ -269,7 +269,7 @@ ul#topMenu {
     display: none;
 }
 
-#popup > ul > li:hover .popupSub {
+#popup>ul>li:hover .popupSub {
     display: inline;
 }
 
@@ -279,12 +279,12 @@ ul#topMenu {
     padding: 40px;
 }
 
-#footerTop > ul {
+#footerTop>ul {
     display: flex;
     justify-content: space-evenly;
 }
 
-#footerTop > ul > li {
+#footerTop>ul>li {
     font-size: 15px;
 }
 
@@ -295,7 +295,7 @@ ul#topMenu {
     color: grey;
 }
 
-#footerBottom > ul > li {
+#footerBottom>ul>li {
     font-size: 13px;
     text-align: center;
 }
