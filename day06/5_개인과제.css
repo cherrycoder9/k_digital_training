@@ -1,0 +1,132 @@
+/* 폰트 선언 */
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* 레이아웃 확인용 */
+* {
+    /* border: 1px solid #dbdbdb; */
+    /* z-index: -1; */
+}
+
+/* CSS 기본설정 초기화 */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 12px;
+    font-family: 'Pretendard-Regular';
+    color: #535353;
+}
+
+/* CSS 기본설정 초기화 */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* CSS 기본설정 초기화 */
+li {
+    list-style: none;
+}
+
+/* 플렉스 변환 */
+.layoutFlex {
+    display: flex;
+}
+
+/* 라인 우측정렬 */
+.layoutEnd {
+    justify-content: flex-end;
+}
+
+/* 라인 균등정렬 */
+.layoutCenter {
+    justify-content: center;
+}
+
+/* ========== 1. 헤더 CSS 설정 ========== */
+#header>ul {
+    align-items: center;
+}
+
+#header>ul>li {
+    text-align: center;
+}
+
+/* ========== 1-1. 헤더 탑 CSS 설정 ========== */
+#headerTop {
+    padding-right: 40px;
+    border-bottom: 1px solid grey;
+}
+
+#headerTop>li {
+    padding: 10px;
+}
+
+#headerTop>li:last-child>a {
+    display: inline-block;
+    line-height: 100%;
+    text-align: center;
+}
+
+#headerTop>li:last-child>a img {
+    vertical-align: middle;
+    width: 20px;
+}
+
+#headerTop>li:not(:last-child)::after {
+    content: "|";
+    margin-left: 18px;
+    color: #a5a5a5;
+}
+
+/* ========== 1-2. 헤더 바텀 CSS 설정 ========== */
+#headerBottom {
+    /* align-items: center; */
+}
+
+#headerBottom>li {
+    height: 40px;
+}
+
+#headerBottom>li:not(:first-child) {
+    margin-left: 30px;
+}
+
+.layoutLeft {
+    position: absolute;
+    left: 0px;
+    margin-left: 30px;
+}
+
+.layoutLeft img {
+    width: 120px;
+}
+
+.layoutRight {
+    position: absolute;
+    width: 140px;
+    right: 20px;
+    margin-right: 20px;
+    border-bottom: 1px solid rgb(80, 80, 80);
+}
+
+.layoutRight>input {
+    width: 110px;
+    outline: none;
+    border: none;
+    padding: 3px;
+}
+
+.layoutRight>img {
+    position: relative;
+    right: -4px;
+    top: 4px;
+    width: 17px;
+    cursor: pointer;
+    opacity: 60%;
+}
