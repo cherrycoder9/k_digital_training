@@ -36,6 +36,7 @@ li {
 /* 플렉스 변환 */
 .layoutFlex {
     display: flex;
+    align-items: center;
 }
 
 /* 라인 우측정렬 */
@@ -49,18 +50,10 @@ li {
 }
 
 /* ========== 1. 헤더 CSS 설정 ========== */
-#header>ul {
-    align-items: center;
-}
-
-#header>ul>li {
-    text-align: center;
-}
-
 /* ========== 1-1. 헤더 탑 CSS 설정 ========== */
 #headerTop {
     padding-right: 40px;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid rgb(197, 197, 197);
 }
 
 #headerTop>li {
@@ -85,26 +78,28 @@ li {
 }
 
 /* ========== 1-2. 헤더 바텀 CSS 설정 ========== */
-#headerBottom {
-    /* align-items: center; */
-}
-
-#headerBottom>li {
-    height: 40px;
-}
-
-#headerBottom>li:not(:first-child) {
+#headerBottom>a {
     margin-left: 30px;
+    margin-right: 30px;
 }
 
-.layoutLeft {
-    position: absolute;
-    left: 0px;
-    margin-left: 30px;
+#headerBottom>ul {
+    width: 600px;
+    justify-content: space-between;
 }
 
-.layoutLeft img {
-    width: 120px;
+#headerBottom>ul>li {
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 80%;
+}
+
+.colorRed {
+    color: red;
 }
 
 .layoutRight {
@@ -116,7 +111,7 @@ li {
 }
 
 .layoutRight>input {
-    width: 110px;
+    width: 115px;
     outline: none;
     border: none;
     padding: 3px;
@@ -129,4 +124,12 @@ li {
     width: 17px;
     cursor: pointer;
     opacity: 60%;
+}
+
+/* ========== 2. 메인 CSS 설정 ========== */
+/* ========== 2-1. 메인 탑 CSS 설정 ========== */
+#mainTop>img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
 }
