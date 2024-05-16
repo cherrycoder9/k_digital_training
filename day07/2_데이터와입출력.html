@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
+    <!-- <script src='main.js'></script> -->
+</head>
+
+<body>
+    <!--
+        - HTML에서 js를 적용하는 방법
+            1. <body> 마크업에 <script>JS문법</script>
+            2. <head> 마크업에 <script src="JS파일경로"></script>
+        
+        - 데이터/자료 란?
+            - 관찰, 수집 등을 통한 사실을 모아 놓은 것
+            - 컴퓨터 데이터: 컴퓨터가 처리할 수 있는 문자, 숫자, 소리, 그림 
+        - JS의 데이터
+            1. 문자: " " 또는 ' ' 또는 ` `(백틱) 으로 감싼 자료 
+                예) "안녕하세요", '7'
+            2. 숫자: 
+                예) 7
+            3. 논리/불리언: 
+                예) true, false
+        - JS의 주석
+            1. 한줄주석: //
+            2. 여러줄주석: /* */
+
+        - JS 입출력
+            - 출력
+            1. console.log(data) : 개발자도구 F12에 콘솔탭에 출력: 오류 위치 찾을때 많이씀
+            2. alert(data) : 브라우저에 알림 메시지 창 (확인버튼)
+            3. document.write(data) : 현재 HTML에 출력
+            4. document.마크업명.innerHTML = data : 특정 HTML 마크업에 출력
+
+            - 입력
+            1. confirm('메시지') : 브라우저에 알림 메시지 창 (확인=true, 취소=false)
+            2. prompt() : 브라우저에 알림 메시지 창 (input=입력값, 확인=true, 취소=false)
+            3. document.querySelector('선택자').innerHTML : 특정 HTML 마크업에 작성된 content 가져오기
+    -->
+
+
+    <script>
+        // 1. 개발자도구 F12에 콘솔탭에 출력: 오류 위치 찾을때 많이씀
+        console.log("Code Master");
+        console.log(10);
+        console.log(false);
+        console.log("Code Master");
+        console.log(13.1212);
+        // 2. 브라우저에 알림 메시지 창
+        // alert("Code Master");
+        // alert(10);
+        // alert(true);
+        // 3. 현재 HTML에 출력 
+        document.write("Code Master<br/>");
+        document.write(10 + 10);
+        document.write(false);
+        // 4. document.마크업명.innerHTML =
+        document.body.innerHTML = "Code Master";
+
+        // 입력: 입력장치 
+        // 주로 HTML에서 입력 하기 때문에 사용빈도 낮음 
+        // 1. confirm(): 브라우저에 알림 메시지 창(확인=true, 취소=false 값임)
+        confirm("code master");
+        // 2. prompt(): 브라우저에 알림 메시지창(input, 확인=true, 취소=false)
+        document.write(prompt("code master"));
+        // --- 빈도 높은 함수/기능
+        document.querySelector('body').innerHTML
+    </script>
+</body>
+
+</html>

@@ -121,7 +121,7 @@ ul#topMenu {
     position: relative;
 }
 
-#mainMenu .subMenu {
+.subMenu>li {
     position: absolute;
     top: 80px;
     background-color: white;
