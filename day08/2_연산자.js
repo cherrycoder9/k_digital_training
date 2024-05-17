@@ -57,3 +57,5 @@ let 앞실수 = Number(prompt("실수1 입력"));
 let 뒷실수 = Number(prompt("실수2 입력"));
 비율 = 앞실수 / 뒷실수 * 100;
 console.log(`비율은 ${비율}% 입니다.`);
+
+// ㅇㄴ리ㅏㄴㅇㄹ
