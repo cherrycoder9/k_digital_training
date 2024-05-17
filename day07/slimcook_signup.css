@@ -1,0 +1,162 @@
+/* 공통 CSS 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 레이아웃 테스트 */
+* {
+    /* border: 1px solid grey; */
+}
+
+/* 회원가입 페이지 */
+/* 페이지 너비 */
+#signup {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+/* 제목 꾸밈 */
+#signup>h3 {
+    margin-top: 30px;
+    padding-bottom: 15px;
+    font-size: 20px;
+    border-bottom: 1px solid black;
+    opacity: 80%;
+}
+
+/* 테이블 너비 */
+#signup>table {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+}
+
+/* 테이블 셀들 패딩 */
+#signup th,
+#signup td {
+    padding: 10px;
+    border: 1px solid #e3e3e3;
+}
+
+/* 테이블 왼쪽칸 꾸밈 설정 */
+#signup th {
+    width: 200px;
+    text-align: left;
+    padding: 20px;
+    background-color: #f8f8f8;
+    font-weight: 400;
+}
+
+/* 필수 입력은 *를 빨간색으로 */
+#signup .colorRed {
+    color: red;
+}
+
+/* 테이블 우측 인풋박스 디테일 */
+#signup td input {
+    margin-right: 15px;
+    margin-left: 15px;
+    height: 30px;
+    padding: 5px;
+    font-size: 15px;
+    border: 1px solid #e3e3e3;
+}
+
+/* 테이블 우측 인풋박스 포커스될때 디테일 */
+#signup td input:focus {
+    outline: 1px solid #e3e3e3;
+}
+
+/* 테이블 셀들 좌측 선들 디테일 */
+#signup th:first-child,
+#signup td:first-child {
+    border-left: 0;
+}
+
+/* 테이블 셀들 우측 선들 디테일 */
+#signup th:last-child,
+#signup td:last-child {
+    border-right: 0;
+}
+
+/* 실릭트 박스 디테일 */
+#signup select {
+    width: 70px;
+    height: 30px;
+    margin-right: 5px;
+    margin-left: 15px;
+    text-align: center;
+}
+
+/* 버튼 디테일 */
+#signup button {
+    width: 100px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+/* 버튼 호버시 디테일 */
+#signup button:hover {
+    background-color: #00865A;
+    color: white;
+    font-weight: bold;
+}
+
+/* 라벨 안 글자 가운데로 */
+#signup label {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+/* 각 라벨을 한줄 수평 정렬  */
+#signup .alignRow {
+    display: flex;
+}
+
+/* 인풋박스 중 몇 개 더 작게 설정 */
+#signup .smaller {
+    width: 90px;
+}
+
+/* 인풋박스 중 몇 개 더 작게 설정 */
+#signup .larger {
+    width: 500px;
+}
+
+/* 이메일 선택상자 너비 조정 */
+#signup .emailbox {
+    width: 100px;
+    margin-left: -10px;
+}
+
+/* 추천인 검색 버튼 조정 */
+#signup .searchBtn {
+    width: 150px;
+    background-color: rgb(208, 208, 208);
+    border-radius: 0;
+}
+
+/* 추천인 검색 버튼 호버 조정 */
+#signup .searchBtn:hover {
+    width: 150px;
+    background-color: rgb(208, 208, 208);
+    border-radius: 0;
+    color: black;
+}
+
+/* 개인정보 동의 박스 */
+#signup #agreeBox {
+    margin-top: 70px;
+    border: 1px solid #e3e3e3;
+    padding: 20px;
+}
+
+#signup .agreeBoxDetail {
+    margin-top: 20px;
+    border: 1px solid #e3e3e3;
+}

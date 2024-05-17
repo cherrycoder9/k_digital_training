@@ -1,0 +1,209 @@
+<!-- 
+    HTML / CSS 이용한 웹페이지 클론
+        1. 조 별로 클론할 홈페이지 선정 (슬림쿡)
+        2. 1인당 1~2페이지 이상 (회원가입 + 장바구니 상품1개 담고)
+        3. 수요일 5시까지 
+ -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='slimcook_signup.css'>
+    <!-- <script src='main.js'></script> -->
+</head>
+
+<body>
+    <div id="signup">
+        <h3>회원정보 입력</h3>
+        <table>
+            <tr>
+                <th><span class="colorRed">* </span>이름</th>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <th><span class="colorRed">* </span>아이디</th>
+                <td><input type="text"><button>중복확인</button></td>
+            </tr>
+            <tr>
+                <th><span class="colorRed">* </span>비밀번호</th>
+                <td><input type="password">* 영문 대소문자/숫자/특수문자를 혼용하여 2종류 10~16자 또는 3종류 8~16자</td>
+            </tr>
+            <tr>
+                <th><span class="colorRed">* </span>비밀번호 확인</th>
+                <td><input type="password"></td>
+            </tr>
+            <tr>
+                <th><span class="colorRed">* </span>생년월일</th>
+                <td>
+                    <select>
+                        <option>선택</option>
+                        <option>1981</option>
+                        <option>1982</option>
+                        <option>1983</option>
+                        <option>1984</option>
+                        <option>1985</option>
+                        <option>1986</option>
+                        <option>1987</option>
+                        <option>1988</option>
+                        <option>1989</option>
+                    </select>
+                    년
+                    <select>
+                        <option>선택</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                    </select>
+                    월
+                    <select>
+                        <option>선택</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                        <option value="">5</option>
+                        <option value="">6</option>
+                        <option value="">7</option>
+                        <option value="">8</option>
+                        <option value="">9</option>
+                        <option value="">10</option>
+                        <option value="">11</option>
+                        <option value="">12</option>
+                        <option value="">13</option>
+                        <option value="">14</option>
+                        <option value="">15</option>
+                        <option value="">16</option>
+                        <option value="">17</option>
+                        <option value="">18</option>
+                        <option value="">19</option>
+                        <option value="">20</option>
+                        <option value="">21</option>
+                        <option value="">22</option>
+                        <option value="">23</option>
+                        <option value="">24</option>
+                        <option value="">25</option>
+                        <option value="">26</option>
+                        <option value="">27</option>
+                        <option value="">28</option>
+                        <option value="">29</option>
+                        <option value="">30</option>
+                        <option value="">31</option>
+                    </select>
+                    일
+                </td>
+            </tr>
+            <tr>
+                <th><span class="colorRed">* </span>성별</th>
+                <td>
+                    <div class="alignRow">
+                        <label>
+                            <input type="radio" name="gender">
+                            선택 안함
+                        </label>
+                        <label>
+                            <input type="radio" name="gender">
+                            남
+                        </label>
+                        <label>
+                            <input type="radio" name="gender">
+                            여
+                        </label>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th><span class="colorRed">* </span>우편번호</th>
+                <td>
+                    <input type="text" class="smaller" readonly>
+                    <button type="button">우편번호검색</button>
+                </td>
+            </tr>
+            <tr>
+                <th><span class="colorRed">* </span>집주소</th>
+                <td>
+                    <input type="text" class="larger" readonly>
+                </td>
+            </tr>
+            <tr>
+                <th><span class="colorRed">* </span>상세주소</th>
+                <td>
+                    <input type="text" class="larger">
+                    <label>
+                        <input type="checkbox" name="" id="">
+                        기본 배송지로 저장
+                    </label>
+                </td>
+            </tr>
+            <tr>
+                <th><span class="colorRed">* </span>이메일</th>
+                <td>
+                    <input type="text">
+                    @
+                    <input type="text">
+                    <select class="emailbox">
+                        <option>직접입력</option>
+                        <option>naver.com</option>
+                        <option>hanmail.net</option>
+                        <option>gmail.com</option>
+                        <option>nate.com</option>
+                        <option>yahoo.com</option>
+                    </select>
+                    <button>이메일 중복확인</button>
+                </td>
+            </tr>
+            <tr>
+                <th><span class="colorRed">* </span>휴대폰</th>
+                <td>
+                    <select>
+                        <option>선택</option>
+                        <option>010</option>
+                        <option>011</option>
+                        <option>016</option>
+                        <option>017</option>
+                        <option>018</option>
+                        <option>019</option>
+                    </select>
+                    -
+                    <input type="text">
+                    -
+                    <input type="text">
+
+                </td>
+            </tr>
+            <tr>
+                <th><span class="colorRed">* </span>추천인</th>
+                <td>
+                    <input type="text">
+                    <button type="button" class="searchBtn">추천인 아이디 검색</button>
+                </td>
+            </tr>
+        </table>
+
+        <div id="agreeBox">
+            <input type="checkbox">
+            전체동의
+            <div class="agreeBoxDetail">
+                <div>
+                    <input type="checkbox">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
