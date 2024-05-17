@@ -1,12 +1,32 @@
 /*
     연산자: 연산시 사용되는 기호
-    1. 산술연산자
+    1. 산술연산자: 결과물 => 연산 결과
         + 더하기 - 빼기 * 곱하기 / 나누기 % 나머지
         몫: parseInt(): 정수 반환 함수
 
-    2. 연결연산자
+    2. 연결연산자 : 결과물 => 연결 결과
         - 피연산자가 문자이면 연결연산자로 적용
         - 문자 + (숫자1 + 숫자2): 숫자들 먼저 더하고 연결연산자 적용
+
+    3. 비교연산자: 결과물 => true / false
+        > 초과/크다         >= 이상/크거나같다
+        < 미만/작다         <= 이하/작거나같다
+        == 값이 같다        === 값과타입이 같다
+        != 같지 않다        !== 같지 않다 
+
+    4. 관계연산자: 비교연산자 2개 이상일 때 
+        && 이면서 면서 이고 그리고 모두 and조건
+            true && true -> true
+            true && false -> false
+        || 이거나 거나 하나라도 또는 or조건
+            true || true -> true
+            true || false -> true
+        ! 부정 반대 not조건 
+            !true => false
+            !false => true
+
+    5. 대입연산자 
+        = 
 
 */
 // console.log(10 + 3); // 13
@@ -52,10 +72,60 @@
 // console.log(`원넓이: ${원넓이}`);
 
 // 문제 3
-let 비율;
-let 앞실수 = Number(prompt("실수1 입력"));
-let 뒷실수 = Number(prompt("실수2 입력"));
-비율 = 앞실수 / 뒷실수 * 100;
-console.log(`비율은 ${비율}% 입니다.`);
+// let 비율;
+// let 앞실수 = Number(prompt("실수1 입력"));
+// let 뒷실수 = Number(prompt("실수2 입력"));
+// 비율 = 앞실수 / 뒷실수 * 100;
+// console.log(`비율은 ${비율}% 입니다.`);
 
-// ㅇㄴ리ㅏㄴㅇㄹ
+// 3. 비교연산자
+// console.log(10 > 3);
+// console.log(10 >= 3);
+// console.log(10 < 3);
+// console.log(10 <= 3);
+// console.log(10 == 3);
+// console.log(10 == '10');
+// console.log(10 === '10');
+// console.log(10 != '10');
+// console.log(10 !== '10');
+
+// 4. 관계연산자, 논리연산자
+// console.log(10 > 3 && 20 > 10);
+// console.log(10 > 3 && 20 > 30);
+// console.log(10 > 3 || 20 > 10);
+// console.log(10 > 3 || 20 > 30);
+// console.log(!(10 > 3));
+
+// 문제4. prompt 함수로 정수를 입력받아 홀수/짝수 여부 콘솔출력
+// 예) 7 입력시 true 출력
+// let 홀짝여부 = Number(prompt("숫자입력"));
+// let 결과 = 홀짝여부 % 2 == 1;
+// console.log(`결과: ${결과}`);
+
+// 문제5. prompt 함수로 정수를 입력받아 7배수이면 true / 아니면 false
+// let 정수 = Number(prompt("정수입력"));
+// let 정수여부 = 정수 / 7 == 1;
+// console.log(`결과: ${정수여부}`);
+
+// 문제6. prompt 함수로 아이디와 비밀번호를 입력받아 아이디 admin이고
+// 비밀번호가 1234와 일치하면 true 아니면 false
+let 아이디 = prompt("아이디입력");
+let 비번 = prompt("비번입력");
+let 일치여부 = (아이디 == "admin" && 비번 == "1234");
+console.log(`결과: ${일치여부}`);
+
+// 문제7. prompt 함수로 정수를 입력받아 홀수이면서 7배수이면 true 아니면 false로 출력
+let 입력값 = Number(prompt("정수입력"));
+let 결과 = (입력값 % 7 == 0) && (입력값 % 2 == 1);
+console.log(`결과: ${결과}`);
+
+// 문제8. prompt 함수로 십만원 단위의금액을 입력받아 지폐 개수 출력
+let 금액 = prompt("금액입력");
+let 십만단위 = Number(금액[0]);
+let 만단위 = Number(금액[1]);
+let 천단위 = Number(금액[2]);
+let 백단위 = Number(금액[3]);
+let 십단위 = Number(금액[4]);
+let 일단위 = Number(금액[5]);
+let 총지폐수 = 십만단위 + 만단위 + 천단위 + 백단위 + 십단위 + 일단위;
+console.log(`총지폐수: ${총지폐수}`);

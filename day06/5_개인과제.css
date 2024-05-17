@@ -127,6 +127,12 @@ li {
 }
 
 /* ========== 1-3. 헤더 바텀 하위메뉴 ========== */
+#headerBottom {
+    position: sticky;
+    top: 0px;
+    background-color: white;
+}
+
 #headerBottom>ul>li {
     position: relative;
 }
@@ -184,15 +190,36 @@ li {
 
 #mainBottom>ul>li {
     width: 21%;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
 }
 
 #mainBottom>ul>li>img {
-    width: 100%;
+    width: 80%;
 }
 
 
-/* ========== 2-3. 메인 사이드바 ========== */
+/* ========== 2-3. 메인 사이드바(스티키) ========== */
+#mainSidebar>ul {
+    position: fixed;
+    right: 0;
+    bottom: 35%;
+    text-align: center;
+}
 
+
+#mainSidebar>ul>li {
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgb(170, 170, 170);
+    align-content: center;
+}
+
+
+#mainSidebar>ul>li img {
+    width: 80%;
+}
 
 
 /* ========== 3. 푸터 CSS 설정 ========== */
