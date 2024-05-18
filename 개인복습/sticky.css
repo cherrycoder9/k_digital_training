@@ -1,0 +1,16 @@
+.content {
+    height: 3000px;
+}
+
+.subMenu {
+    height: 30px;
+    border: 1px solid red;
+}
+
+.mainMenu {
+    position: sticky;
+    top: 0px;
+    height: 50px;
+    border: 1px solid blue;
+    text-align: center;
+}
