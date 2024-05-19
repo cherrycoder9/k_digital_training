@@ -150,13 +150,109 @@
 }
 
 /* 개인정보 동의 박스 */
-#signup #agreeBox {
+#signup #chkwrap {
     margin-top: 70px;
     border: 1px solid #e3e3e3;
-    padding: 20px;
 }
 
-#signup .agreeBoxDetail {
+#signup .allchk {
+    padding: 20px;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+#signup .allchk input[type=checkbox] {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#signup .partchk {
+    margin: 0 20px;
+    padding: 20px 0;
+}
+
+#signup .partchk .chktop {
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #e3e3e3;
+}
+
+#signup .partchk input[type=checkbox] {
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
+#signup .partchk button {
+    width: 70px;
+    height: 15px;
+    border-radius: 0;
+    margin-left: 15px;
+    margin-right: 35px;
+    background-color: #eeeeee;
+    color: black;
+    font-size: 10px;
+}
+
+#signup .chktop label,
+#signup .chkbottom label {
+    display: inline-block;
+    align-self: center;
+}
+
+#signup .chkbottom {
+    margin-top: 15px;
+}
+
+#signup .chkbottom p {
+    margin-left: 15px;
+}
+
+.smallfont {
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+/* 가입완료 버튼 */
+#finSignup {
+    display: flex;
+    justify-content: center;
     margin-top: 20px;
+    padding-bottom: 30px;
+    padding-bottom: 1px solid #e3e3e3;
+
+}
+
+#finSignup .bigButton {
+    width: 240px;
+    height: 60px;
+    background-color: #00865A;
+    border-color: #00865A;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+#privacyinfo textarea {
+    width: 100%;
+    height: 200px;
+    text-wrap: nowrap;
+    padding: 10px;
     border: 1px solid #e3e3e3;
+}
+
+#privacyinfo h4 {
+    padding: 5px;
+    margin-top: 25px;
+}
+
+#tableSetting table {
+    width: 100%;
+    border: 1px solid #e3e3e3;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+#tableSetting table th,
+#tableSetting table td {
+    text-align: center;
 }
