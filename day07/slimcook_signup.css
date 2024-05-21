@@ -500,7 +500,7 @@ a {
 #popupKakao {
     position: fixed;
     top: 88%;
-    right: 60px;
+    right: 50px;
 }
 
 /*======================= 회원가입 =======================*/
@@ -516,7 +516,7 @@ a {
 
 /* 제목 꾸밈 */
 #signup>h3 {
-    margin-top: 30px;
+    margin-top: 50px;
     padding-bottom: 15px;
     font-size: 20px;
     border-bottom: 1px solid black;
