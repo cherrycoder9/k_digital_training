@@ -50,6 +50,46 @@ a {
 }
 
 
+/*=======================전체구역=======================*/
+* {
+    padding: 0px;
+    margin: 0px;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: 46433f;
+}
+
+/*=======================확인용=======================*/
+/* *{ border: 1px solid red;} */
+
+/*======================= 폰트 =======================*/
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Pretendard-Regular';
+    color: #46433f;
+}
+
+/*=======================레이아웃=======================*/
+#content {
+    width: 1100px;
+    margin: 0px auto;
+}
+
+
 /*======================= 헤더 =======================*/
 #skyEvent {
     width: 100%;
@@ -61,6 +101,7 @@ a {
     color: white;
     font-size: 20px;
     font-weight: bold;
+    letter-spacing: 1px;
 }
 
 #eventText {
@@ -109,7 +150,7 @@ a {
     text-align: center;
     line-height: 190%;
     display: none;
-    z-index: 1;
+    z-index: 2;
 }
 
 #leftMenu li:hover .subMenu {
@@ -137,6 +178,10 @@ a {
     border-radius: 10px;
 }
 
+#rightMenu li:hover #rightMenuhover {
+    color: #00865A;
+}
+
 #mainLogo {
     margin: 0px auto;
     width: 1100px;
@@ -154,8 +199,13 @@ a {
     position: sticky;
     top: 0px;
     background-color: white;
-    padding: 8px 0;
     border-bottom: 1px solid #dbdbdb;
+    z-index: 1;
+}
+
+#mainMenu2 li:hover #categoryBtn {
+    color: #00865A;
+    font-weight: bolder;
 }
 
 #mainMenu2 {
@@ -183,6 +233,10 @@ a {
     padding-right: 90px;
 }
 
+#mainMenu2>ul>li>a {
+    height: 49px;
+}
+
 #topmenuIcon {
     padding-right: 10px;
     padding-top: 3px;
@@ -194,7 +248,7 @@ a {
 
 #category1 {
     position: absolute;
-    top: 37px;
+    top: 49px;
     left: 0px;
     width: 100%;
     border-left: 1px solid #cfd0d1;
@@ -212,7 +266,7 @@ a {
 #category2 {
     position: absolute;
     left: 0px;
-    top: 180px;
+    top: 200px;
     width: 100%;
     border-left: 1px solid #cfd0d1;
     border-right: 1px solid #cfd0d1;
@@ -224,6 +278,14 @@ a {
     letter-spacing: 1px;
     padding-left: 30px;
     display: none;
+}
+
+#category1 li:hover #category1Hover {
+    color: #00865A;
+}
+
+#category2 li:hover #category2Hover {
+    color: #00865A;
 }
 
 #category:hover #category1 {
@@ -244,6 +306,7 @@ a {
     display: flex;
     align-items: center;
     position: relative;
+    margin-top: 8px;
 }
 
 #searchBox>input {
@@ -335,6 +398,10 @@ a {
     text-decoration: underline;
 }
 
+#imporNotice {
+    font-weight: bold;
+}
+
 #ftright {
     width: 45%;
     display: flex;
@@ -381,6 +448,10 @@ a {
     line-height: 30px;
 }
 
+.ftBtn:hover #ftBtna {
+    text-decoration: underline;
+}
+
 #bottomFooter {
     width: 1100px;
     margin: 0 auto;
@@ -425,11 +496,22 @@ a {
     color: #999999;
 }
 
+/*======================= 팝업 =======================*/
+#popupKakao {
+    position: fixed;
+    top: 88%;
+    right: 60px;
+}
+
 /*======================= 회원가입 =======================*/
 /* 페이지 너비 */
 #signup {
     width: 1100px;
     margin: 0 auto;
+}
+
+#signup * {
+    font-size: 14px;
 }
 
 /* 제목 꾸밈 */
