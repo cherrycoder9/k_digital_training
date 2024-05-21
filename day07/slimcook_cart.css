@@ -24,7 +24,7 @@
 }
 
 #cart .buySelect1 {
-    padding-top: 20px;
+    padding: 30px;
     align-self: center;
     text-align: center;
     font-size: 20px;
@@ -37,9 +37,9 @@
 
 #cart .buySelect2 {
     align-self: flex-end;
-    margin-top: 25px;
+    margin-top: 45px;
     margin-right: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 #cart .buySelect2 a {
@@ -84,7 +84,7 @@
     border: 1px solid grey;
     padding: 3px;
     cursor: pointer;
-    margin: 5px;
+    margin: 3px;
 }
 
 #cart table p button:hover {
@@ -108,7 +108,116 @@
 .layoutFlex input {
     width: 30px;
     appearance: none;
-    margin: 0 5px;
+    margin: 0 3px;
     text-align: center;
     border: 1px solid grey;
+}
+
+#cart table .resizeBtn button {
+    width: 80px;
+    height: 25px;
+    margin: 2px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#cart table .resizeBtn button:hover {
+    background-color: #00865A;
+    color: white;
+}
+
+#cart table .resizeBtn2 button {
+    width: 30px;
+    height: 25px;
+    background-color: white;
+    border: 1px solid rgb(216, 216, 216);
+    cursor: pointer;
+}
+
+#cart table .resizeBtn2 button.rsz {
+    width: 50px;
+    height: 25px;
+    background-color: white;
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#cart .directGo {
+    display: inline-block;
+    width: 100%;
+    background-color: rgb(255, 208, 0);
+    font-size: 11px;
+    padding: 3px;
+    border-radius: 5px;
+    color: black;
+}
+
+#cart tr#lastTr>th.tdAlignRight {
+    text-align: right;
+    padding-right: 15px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+#cart tr#midTr>td.tdAlignRight {
+    text-align: right;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#cart table tr#midTr th,
+#cart table tr#midTr td {
+    padding: 10px 0;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+#cart table tr#lastTr th,
+#cart table tr#lastTr td {
+    padding: 15px 0;
+    border-top: solid 1px black;
+}
+
+#cart #cartButtonWrap {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+#cart #cartButtonWrap button {
+    width: 160px;
+    height: 60px;
+    margin: 5px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#cart #cartButtonWrap button#detailOrderBtn {
+    background-color: #00865A;
+    color: white;
+}
+
+#cart #easyPay {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+#cart #easyPay img {
+    margin: 5px;
+    cursor: pointer;
+}
+
+#cart #easyPay div:first-child {
+    padding-top: 2px;
 }
