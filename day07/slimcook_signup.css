@@ -634,14 +634,15 @@ a {
 /* 추천인 검색 버튼 조정 */
 #signup .searchBtn {
     width: 150px;
-    background-color: rgb(208, 208, 208);
+    background-color: rgb(234, 234, 234);
+    border: 1px solid white;
     border-radius: 0;
 }
 
 /* 추천인 검색 버튼 호버 조정 */
 #signup .searchBtn:hover {
     width: 150px;
-    background-color: rgb(208, 208, 208);
+    background-color: rgb(234, 234, 234);
     border-radius: 0;
     color: black;
 }
