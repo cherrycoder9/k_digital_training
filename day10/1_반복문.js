@@ -41,7 +41,7 @@
 // }
 
 // 5. 반복문을 이용한 구구단 중에 2단 출력
-let dan = i;
+let dan = 2;
 for (let i = 1; i <= 9; i++) {
     console.log(`${dan} x ${i} = ${dan * i}`);
 }
