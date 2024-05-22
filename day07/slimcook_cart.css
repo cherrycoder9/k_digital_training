@@ -689,7 +689,13 @@ a {
     border-radius: 5px;
     border: 1px solid black;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 15px;
+}
+
+#cart #cartButtonWrap button:hover {
+    background-color: #00865A;
+    color: white;
+    font-weight: bold;
 }
 
 #cart #cartButtonWrap button#detailOrderBtn {
