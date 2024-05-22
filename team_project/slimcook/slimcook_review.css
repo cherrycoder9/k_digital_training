@@ -1,0 +1,399 @@
+*{ 
+    /* 글머리 제거 */
+    list-style-type: none; 
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family:"Nanum Gothic";
+    font-size: 12px;
+}  
+a{ 
+    /* a마크업의 밑줄제거,색상 검정*/
+    text-decoration: none; 
+    color: black;
+}
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+*{ font-family: 'Pretendard-Regular'; color: #46433f; }
+/* 작업용 */
+/* *{
+    border: 1px solid red;
+} */
+#W{
+    width: 100%;
+    margin: 0 auto;
+}
+#skyEvent{ 
+    width: 100%;
+    background-color: #00865A; 
+    padding: 14px 0px;
+}
+#skyEvent  a{
+    color: white; 
+    font-size: 20px; font-weight: bold;
+}
+#eventText{ text-align: center; }
+#xIcon{ 
+    position: absolute;
+    top: 0; right: 0;
+}
+#topMenu{ 
+    width: 1100px; margin: 0px auto; 
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+}
+#leftMenu{
+    display: flex;
+}
+#leftMenu > li{ 
+    padding: 0 15px 0 0;
+}
+#leftMenu > li > a{
+    font-size: 13px; 
+    letter-spacing: 2px;
+}
+#leftMenu > li{ position: relative; }
+#leftMenu .subMenu{
+    position: absolute; top: 20px;
+    right: 12px;
+    background-color: white;
+    border: 1px solid #dbdbdb;
+    padding: 10px 0;
+    width: 110%;
+    text-align: center;
+    line-height: 190%;
+    display: none;
+    z-index: 1;
+}
+#leftMenu li:hover .subMenu{ display: block;}
+#rightMenu{
+    display: flex;
+}
+#rightMenu > li{
+    padding: 0 0 0 20px;
+}
+#rightMenu > li > a{
+    font-size: 13px; 
+    letter-spacing: 2px;
+}
+#blackBox{
+    background-color: black; color: white;
+    text-align: center;
+    padding: 0px 8px;
+    border-radius: 10px;
+}
+#mainLogo{
+    margin: 0px auto;
+    width: 1100px; 
+    text-align: center;
+    padding: 32.5px 0;
+}
+#logoImg{ width: 135px; }
+#mainMenu{
+    width: 100%; margin: 0px auto;
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    padding: 8px 0;
+    border-bottom: 1px solid #dbdbdb;
+}
+#mainMenu2{
+    width: 1100px; margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+#mainMenu2 > ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#mainMenu2 > ul > li > a{
+    display: flex;
+    align-items: center;
+    font-size: 16px; font-weight: bold;
+}
+#mainMenu2 > ul > li{
+    padding-right: 90px;
+}
+#topmenuIcon{ padding-right: 10px; padding-top: 3px; }
+#mainMenu2 #category{
+    position: relative;
+}
+#category1{
+    position: absolute; 
+    top:37px;
+    left: 0px;
+    width: 100%;
+    border-left: 1px solid #cfd0d1;
+    border-right: 1px solid #cfd0d1;
+    background-color: #ffffff;
+    font-size: 14px; font-weight: bold;
+    line-height: 300%; letter-spacing: 1px;
+    padding: 20px 0;
+    padding-left: 20px;
+    display: none;
+}
+#category2{
+    position: absolute;
+    left: 0px; top: 180px;
+    width: 100%;
+    border-left: 1px solid #cfd0d1;
+    border-right: 1px solid #cfd0d1;
+    border-bottom: 1px solid #cfd0d1;
+    background-color: #f5f5f5;
+    font-size: 14px; font-weight: bold;
+    line-height: 300%; letter-spacing: 1px;
+    padding-left: 30px;
+    display: none;
+}   
+#category:hover #category1 { display: inline-block; }
+#category:hover #category2 { display: inline-block; }
+#searchBox {
+    border: none;
+    width: 190px; height: 34px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+#searchBox > input{
+    border: none; background-color:#f2f2f2;
+    padding-left: 10px;
+}
+#searchIcon{ 
+    width: 15px;
+    position: absolute;
+    right: 7px;
+}
+*:focus{ outline: none; }
+#header{
+    width: 100%;
+    border-bottom: 1px solid #dbdbdb;
+}
+#mainImg{
+    vertical-align: middle;
+    width: 700px;
+}
+/*======================= 팝업 =======================*/
+#popupKakao{
+    position: fixed;
+    top: 88%;
+    right: 60px;
+}
+#popupMenu{
+    position: fixed;
+    bottom: 5%; right: 250px;
+    z-index: 1;
+}
+#popupMenu > ul > li{
+    width: 97px; height: 30px;
+    border: 1px solid #eeeeee;
+    background-color: #ffffff;
+    line-height: 220%;
+    text-align: center;
+
+}
+#popupMenu > ul > #first{ 
+    background-color: #00865A;
+    border: 1px solid #00865A;
+
+}
+#popupMenu > ul > #first > a{ color: white;}
+#contentWrap{ 
+    position: relative;
+    width: 100%; margin: 0px auto;
+}
+#popupMenu img{ 
+    width: 100px; height: 100px; 
+    border-radius: 50%;
+    border: 1px solid #dbdbdb;
+    margin-top: 20px;
+}
+/*======================= 푸터 =======================*/
+#footer{ width: 100%; border-top: 1px solid #dbdbdb; margin: 0 auto;}
+#topFooter{ background-color: #f2f2f2; }
+#ftLeft{ width: 55%; padding-right: 50px;}
+#topftcontent{
+    width: 1100px; margin: 0 auto;
+    display: flex; justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+#ftNotice{
+    display: flex; justify-content: space-between;
+    padding-bottom: 20px;
+}
+#ftNotice > h3{ 
+    font-size: 24px; font-weight: bold;
+    letter-spacing: 2px;
+ }
+#ftNotice > a{ 
+    font-size: 14px; text-decoration: underline;
+    color: #7e7e7e; margin-top: 5px;
+}
+#ftLeft > ul > li{
+    display: flex; justify-content: space-between;
+    margin: 10px 0px;
+    border-bottom: 1px solid #dbdbdb;
+    padding-bottom: 10px;
+}
+#ftLeft > ul > li > a{ font-size: 14px; letter-spacing: 1px; }
+#ftLeft > ul > li > p{ 
+    font-size: 14px; color: #7e7e7e;
+    letter-spacing: 1px;
+}
+#ftLeft a:hover{ font-weight: bold; text-decoration: underline; }
+#imporNotice{ font-weight: bold; }
+#ftright{
+    width: 45%;
+    display: flex; justify-content: space-between;
+    margin-left: 50px;
+}
+#ftright h3{
+    font-size: 20px; font-weight: bold;
+    letter-spacing: 2px;
+    padding-bottom: 20px;
+}
+#centerNum{
+    font-size: 20px; font-weight: bold;
+    letter-spacing: 2px;
+    color: rgb(0, 134, 90);
+}
+#ftright p{
+    font-size: 13px; line-height: 200%;
+    letter-spacing: 2px;
+}
+.ftBtn{
+    display: inline-block;
+    background-color: #2e2e2e; color: #fff;
+    width: 85px; height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.ftBtn a{
+    color: #fff; font-size: 14px;
+    padding: 10px;
+    line-height: 30px;
+}
+.ftBtn:hover #ftBtna{ text-decoration: underline; }
+#bottomFooter{
+    width: 1100px; margin: 0 auto;
+    text-align: center;
+    padding: 50px 0;
+}
+#bottomFooter h3{
+    font-size: 18px; font-family: '고딕';
+    margin-bottom: 10px;
+    color: #2e2e2e;
+}
+#bottomFooter p{
+    color: #2e2e2e; line-height: 180%;
+    letter-spacing: 1px; 
+    font-size: 13px;
+}
+#bottomFooter span{
+    color: #46433f; line-height: 180%;
+    letter-spacing: 1px; 
+    font-size: 13px; font-weight: bold;
+}
+#ftInfo{
+    padding-top: 20px;
+}
+#ftInfo p a{
+    font-size: 13px; color: #1c1c1c;
+    padding: 0 5px;
+}
+#bottomFooter > #lastft{ font-size: 14px; color: #999999; }
+#bottomFooter a:hover{ text-decoration: underline; }
+
+/*===================================본문 시작 =====================*/
+#C{
+    width: 1100px;
+    margin: 0 auto;
+}
+#mainImg{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+#CRW{
+    display: inline-block;
+    padding: 0 16px 80px;
+    width: 700px;
+    box-sizing: border-box;
+    background-color: #f6f5d6;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+#CCATE{
+    margin: 40px 0px;
+    width: 1100px;
+    height: 60px;
+    background-color: #FAFAFA;
+    border: 1px solid #dadada;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+#CBP2{
+    width: 570px;
+    height: 60px;
+    background-color: #00865A;
+    border-radius: 5px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: white;
+    border: none;
+}
+#CSTAR{
+    width: 530px;
+    height: 37px;
+    font-size: 12px;
+    background-color: white;    
+    border: 1px solid #e4e4e5;
+    margin-right: 10px;
+    font-weight: bold;
+    appearance: none;
+    -webkit-appearance: none;
+    background:url('../과제용/img/아래\ 화살표\ 아이콘.png')  no-repeat 98%;
+}
+#CSTAR1{
+    width: 170px;
+    height: 37px;
+    font-size: 12px;
+    background-color: white;    
+    border: 1px solid #e4e4e5;
+    margin-right: 10px;
+    font-weight: bold;
+    appearance: none;
+    -webkit-appearance: none;
+    background:url('../과제용/img/아래\ 화살표\ 아이콘.png')  no-repeat 98%;
+}
+#CCATEIN{
+    width: 114px;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 5px;
+    border: 1px solid #dadada;
+    font-size: 14px;
+}
+#CSEARCH{
+    width: 52px;
+    height: 35px;
+    line-height: 37px;
+    border: 1px solid #000;
+    background: #3f4046;
+    color: #fff;
+    text-align: center;
+}
