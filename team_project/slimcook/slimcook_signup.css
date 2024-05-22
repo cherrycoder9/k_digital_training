@@ -1,0 +1,756 @@
+/* 공통 CSS 설정 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 레이아웃 테스트 */
+* {
+    /* border: 1px solid grey; */
+}
+
+/*=======================전체구역=======================*/
+* {
+    padding: 0px;
+    margin: 0px;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: 46433f;
+}
+
+/*=======================확인용=======================*/
+/* *{ border: 1px solid red;} */
+
+/*======================= 폰트 =======================*/
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Pretendard-Regular';
+    color: #46433f;
+}
+
+/*=======================레이아웃=======================*/
+#content {
+    width: 1100px;
+    margin: 0px auto;
+}
+
+
+/*=======================전체구역=======================*/
+* {
+    padding: 0px;
+    margin: 0px;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: 46433f;
+}
+
+/*=======================확인용=======================*/
+/* *{ border: 1px solid red;} */
+
+/*======================= 폰트 =======================*/
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Pretendard-Regular';
+    color: #46433f;
+}
+
+/*=======================레이아웃=======================*/
+#content {
+    width: 1100px;
+    margin: 0px auto;
+}
+
+
+/*======================= 헤더 =======================*/
+#skyEvent {
+    width: 100%;
+    background-color: #00865A;
+    padding: 14px 0px;
+}
+
+#skyEvent a {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#eventText {
+    text-align: center;
+}
+
+#xIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#topMenu {
+    width: 1100px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+}
+
+#leftMenu {
+    display: flex;
+}
+
+#leftMenu>li {
+    padding: 0 15px 0 0;
+}
+
+#leftMenu>li>a {
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+#leftMenu>li {
+    position: relative;
+}
+
+#leftMenu .subMenu {
+    position: absolute;
+    top: 20px;
+    right: 12px;
+    background-color: white;
+    border: 1px solid #dbdbdb;
+    padding: 10px 0;
+    width: 110%;
+    text-align: center;
+    line-height: 190%;
+    display: none;
+    z-index: 2;
+}
+
+#leftMenu li:hover .subMenu {
+    display: block;
+}
+
+#rightMenu {
+    display: flex;
+}
+
+#rightMenu>li {
+    padding: 0 0 0 20px;
+}
+
+#rightMenu>li>a {
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+#blackBox {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 0px 8px;
+    border-radius: 10px;
+}
+
+#rightMenu li:hover #rightMenuhover {
+    color: #00865A;
+}
+
+#mainLogo {
+    margin: 0px auto;
+    width: 1100px;
+    text-align: center;
+    padding: 32.5px 0;
+}
+
+#logoImg {
+    width: 135px;
+}
+
+#mainMenu {
+    width: 100%;
+    margin: 0px auto;
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    border-bottom: 1px solid #dbdbdb;
+    z-index: 1;
+}
+
+#mainMenu2 li:hover #categoryBtn {
+    color: #00865A;
+    font-weight: bolder;
+}
+
+#mainMenu2 {
+    width: 1100px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+#mainMenu2>ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#mainMenu2>ul>li>a {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#mainMenu2>ul>li {
+    padding-right: 90px;
+}
+
+#mainMenu2>ul>li>a {
+    height: 49px;
+}
+
+#topmenuIcon {
+    padding-right: 10px;
+    padding-top: 3px;
+}
+
+#mainMenu2 #category {
+    position: relative;
+}
+
+#category1 {
+    position: absolute;
+    top: 49px;
+    left: 0px;
+    width: 100%;
+    border-left: 1px solid #cfd0d1;
+    border-right: 1px solid #cfd0d1;
+    background-color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 300%;
+    letter-spacing: 1px;
+    padding: 20px 0;
+    padding-left: 20px;
+    display: none;
+}
+
+#category2 {
+    position: absolute;
+    left: 0px;
+    top: 200px;
+    width: 100%;
+    border-left: 1px solid #cfd0d1;
+    border-right: 1px solid #cfd0d1;
+    border-bottom: 1px solid #cfd0d1;
+    background-color: #f5f5f5;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 300%;
+    letter-spacing: 1px;
+    padding-left: 30px;
+    display: none;
+}
+
+#category1 li:hover #category1Hover {
+    color: #00865A;
+}
+
+#category2 li:hover #category2Hover {
+    color: #00865A;
+}
+
+#category:hover #category1 {
+    display: inline-block;
+}
+
+#category:hover #category2 {
+    display: inline-block;
+}
+
+#searchBox {
+    border: none;
+    width: 190px;
+    height: 34px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 8px;
+}
+
+#searchBox>input {
+    border: none;
+    background-color: #f2f2f2;
+    padding-left: 10px;
+}
+
+#searchIcon {
+    width: 15px;
+    position: absolute;
+    right: 7px;
+}
+
+*:focus {
+    outline: none;
+}
+
+#header {
+    width: 100%;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+/*======================= 푸터 =======================*/
+#footer {
+    width: 100%;
+    border-top: 1px solid #dbdbdb;
+    margin: 0 auto;
+}
+
+#topFooter {
+    background-color: #f2f2f2;
+}
+
+#ftLeft {
+    width: 55%;
+    padding-right: 50px;
+}
+
+#topftcontent {
+    width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+#ftNotice {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+#ftNotice>h3 {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#ftNotice>a {
+    font-size: 14px;
+    text-decoration: underline;
+    color: #7e7e7e;
+    margin-top: 5px;
+}
+
+#ftLeft>ul>li {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px;
+    border-bottom: 1px solid #dbdbdb;
+    padding-bottom: 10px;
+}
+
+#ftLeft>ul>li>a {
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+#ftLeft>ul>li>p {
+    font-size: 14px;
+    color: #7e7e7e;
+    letter-spacing: 1px;
+}
+
+#ftLeft a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#imporNotice {
+    font-weight: bold;
+}
+
+#ftright {
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+}
+
+#ftright h3 {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding-bottom: 20px;
+}
+
+#centerNum {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: rgb(0, 134, 90);
+}
+
+#ftright p {
+    font-size: 13px;
+    line-height: 200%;
+    letter-spacing: 2px;
+}
+
+.ftBtn {
+    display: inline-block;
+    background-color: #2e2e2e;
+    color: #fff;
+    width: 85px;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.ftBtn a {
+    color: #fff;
+    font-size: 14px;
+    padding: 10px;
+    line-height: 30px;
+}
+
+.ftBtn:hover #ftBtna {
+    text-decoration: underline;
+}
+
+#bottomFooter {
+    width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px 0;
+}
+
+#bottomFooter h3 {
+    font-size: 18px;
+    font-family: '고딕';
+    margin-bottom: 10px;
+    color: #2e2e2e;
+}
+
+#bottomFooter p {
+    color: #2e2e2e;
+    line-height: 180%;
+    letter-spacing: 1px;
+    font-size: 13px;
+}
+
+#bottomFooter span {
+    color: #46433f;
+    line-height: 180%;
+    letter-spacing: 1px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#ftInfo {
+    padding-top: 20px;
+}
+
+#ftInfo p a {
+    font-size: 13px;
+    color: #1c1c1c;
+    padding: 0 5px;
+}
+
+#bottomFooter>#lastft {
+    font-size: 14px;
+    color: #999999;
+}
+
+/*======================= 팝업 =======================*/
+#popupKakao {
+    position: fixed;
+    top: 88%;
+    right: 50px;
+}
+
+/*======================= 회원가입 =======================*/
+/* 페이지 너비 */
+#signup {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+#signup * {
+    font-size: 14px;
+}
+
+/* 제목 꾸밈 */
+#signup>h3 {
+    margin-top: 50px;
+    padding-bottom: 15px;
+    font-size: 20px;
+    border-bottom: 1px solid black;
+    opacity: 80%;
+}
+
+/* 테이블 너비 */
+#signup>table {
+    width: 100%;
+    margin-top: 15px;
+    border-collapse: collapse;
+}
+
+/* 테이블 셀들 패딩 */
+#signup th,
+#signup td {
+    padding: 10px;
+    border: 1px solid #e3e3e3;
+}
+
+/* 테이블 왼쪽칸 꾸밈 설정 */
+#signup th {
+    width: 200px;
+    text-align: left;
+    padding: 20px;
+    background-color: #f8f8f8;
+    font-weight: 400;
+}
+
+/* 필수 입력은 *를 빨간색으로 */
+#signup .colorRed {
+    color: red;
+}
+
+/* 테이블 우측 인풋박스 디테일 */
+#signup td input {
+    margin-right: 15px;
+    margin-left: 15px;
+    height: 30px;
+    padding: 5px;
+    font-size: 15px;
+    border: 1px solid #e3e3e3;
+}
+
+/* 테이블 우측 인풋박스 포커스될때 디테일 */
+#signup td input:focus {
+    outline: 1px solid #e3e3e3;
+}
+
+/* 테이블 셀들 좌측 선들 디테일 */
+#signup th:first-child,
+#signup td:first-child {
+    border-left: 0;
+}
+
+/* 테이블 셀들 우측 선들 디테일 */
+#signup th:last-child,
+#signup td:last-child {
+    border-right: 0;
+}
+
+/* 실릭트 박스 디테일 */
+#signup select {
+    width: 70px;
+    height: 30px;
+    margin-right: 5px;
+    margin-left: 15px;
+    text-align: center;
+}
+
+/* 버튼 디테일 */
+#signup button {
+    width: 100px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+/* 버튼 호버시 디테일 */
+#signup button:hover {
+    background-color: #00865A;
+    color: white;
+    font-weight: bold;
+}
+
+/* 라벨 안 글자 가운데로 */
+#signup label {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+/* 각 라벨을 한줄 수평 정렬  */
+#signup .alignRow {
+    display: flex;
+}
+
+/* 인풋박스 중 몇 개 더 작게 설정 */
+#signup .smaller {
+    width: 90px;
+}
+
+/* 인풋박스 중 몇 개 더 작게 설정 */
+#signup .larger {
+    width: 500px;
+}
+
+/* 이메일 선택상자 너비 조정 */
+#signup .emailbox {
+    width: 100px;
+    margin-left: -10px;
+}
+
+/* 추천인 검색 버튼 조정 */
+#signup .searchBtn {
+    width: 150px;
+    background-color: rgb(234, 234, 234);
+    border: 1px solid white;
+    border-radius: 0;
+}
+
+/* 추천인 검색 버튼 호버 조정 */
+#signup .searchBtn:hover {
+    width: 150px;
+    background-color: rgb(234, 234, 234);
+    border-radius: 0;
+    color: black;
+}
+
+/* 개인정보 동의 박스 */
+#signup #chkwrap {
+    margin-top: 70px;
+    border: 1px solid #e3e3e3;
+}
+
+#signup .allchk {
+    padding: 20px;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+#signup .allchk input[type=checkbox] {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#signup .partchk {
+    margin: 0 20px;
+    padding: 20px 0;
+}
+
+#signup .partchk .chktop {
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #e3e3e3;
+}
+
+#signup .partchk input[type=checkbox] {
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
+#signup .partchk button {
+    width: 70px;
+    height: 15px;
+    border-radius: 0;
+    margin-left: 15px;
+    margin-right: 35px;
+    background-color: #eeeeee;
+    color: black;
+    font-size: 10px;
+}
+
+#signup .chktop label,
+#signup .chkbottom label {
+    display: inline-block;
+    align-self: center;
+}
+
+#signup .chkbottom {
+    margin-top: 15px;
+}
+
+#signup .chkbottom p {
+    margin-left: 15px;
+}
+
+.smallfont {
+    padding-top: 10px;
+    font-size: 14px;
+}
+
+/* 가입완료 버튼 */
+#finSignup {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding-bottom: 30px;
+    padding-bottom: 1px solid #e3e3e3;
+
+}
+
+#finSignup .bigButton {
+    width: 240px;
+    height: 60px;
+    background-color: #00865A;
+    border-color: #00865A;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+#privacyinfo textarea {
+    width: 100%;
+    height: 200px;
+    text-wrap: nowrap;
+    padding: 10px;
+    border: 1px solid #e3e3e3;
+}
+
+#privacyinfo h4 {
+    padding: 5px;
+    margin-top: 25px;
+}
+
+#tableSetting table {
+    width: 100%;
+    border: 1px solid #e3e3e3;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+#tableSetting table th,
+#tableSetting table td {
+    text-align: center;
+}

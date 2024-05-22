@@ -1,0 +1,400 @@
+<!-- 
+    HTML / CSS 이용한 웹페이지 클론
+        1. 조 별로 클론할 홈페이지 선정 (슬림쿡)
+        2. 1인당 1~2페이지 이상 (회원가입 + 장바구니 상품1개 담고)
+        3. 수요일 5시까지 
+ -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>개인 회원 가입/수정</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='slimcook_signup.css'>
+    <script src='slimcook_signup.js' defer></script>
+</head>
+
+<body>
+    <!-- 헤더 -->
+    <div id="skyEvent">
+        <div id="eventText"> <a href="#"> 3초만에 가입하고 샐러드 첫구매 100원! </a> </div>
+    </div>
+    <div id="xIcon"> <a href="#"> <img src="img/X_icon_w.svg" /> </a></div>
+    <div id="topMenu">
+
+        <ul id="leftMenu">
+            <li>
+                <a href="#"> My슬림쿡 ∨ </a>
+                <ul class="subMenu">
+                    <li> <a href="#"> 회원정보 </a> </li>
+                    <li> <a href="#"> 주문내역 </a> </li>
+                    <li> <a href="#"> 쿠폰함 </a> </li>
+                    <li> <a href="#"> 출석체크 </a> </li>
+                    <li> <a href="#"> 내 게시글 </a> </li>
+                    <li> <a href="#"> 적립금내역 </a> </li>
+                    <li> <a href="#"> 관심상품 </a> </li>
+                    <li> <a href="#"> 오늘본상품 </a> </li>
+                    <li> <a href="#"> 배송조회 </a> </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#"> 커뮤니티 ∨ </a>
+                <ul class="subMenu">
+                    <li> <a href="#"> 슬림쿡이 궁금해요 </a> </li>
+                    <li> <a href="#"> 공지사항 </a> </li>
+                    <li> <a href="#"> 상품리뷰 </a> </li>
+                    <li> <a href="#"> 자주하는 질문 </a> </li>
+                    <li> <a href="#"> 고객 문의 </a> </li>
+                </ul>
+            </li>
+        </ul>
+        <ul id="rightMenu">
+            <li>
+                <a id="rightMenuhover" href="#"> 로그인 </a>
+            </li>
+            <li>
+                <a id="rightMenuhover" href="silmcook_signup.html"> 회원가입</a>
+            </li>
+            <li>
+                <a id="rightMenuhover" href="silmcook_cart.html"> 장바구니 <span id="blackBox"> 0 </span></a>
+            </li>
+            <li>
+                <a id="rightMenuhover" href="#"> 고객센터 </a>
+            </li>
+            <li>
+                <a id="rightMenuhover" href="#"> 주문조회 </a>
+            </li>
+            <li>
+                <a id="rightMenuhover" href="#"> 택배운송조회 </a>
+            </li>
+        </ul>
+
+    </div>
+    <div id="mainLogo"> <a href="#"><img id="logoImg" src="img/logo.png" /></a> </div>
+    <div id="mainMenu">
+        <div id="mainMenu2">
+            <ul>
+                <li id="category">
+                    <a href="#"> <img id="topmenuIcon" src="img/top_menu_icon.png" /> 카테고리 </a>
+                    <ul id="category1">
+                        <li> <a id="category1Hover" href="#"> 베스트 </a></li>
+                        <li> <a id="category1Hover" href="#"> 신상품 </a></li>
+                        <li> <a id="category1Hover" href="#"> 모든상품∨ </a></li>
+                    </ul>
+                    <ul id="category2">
+                        <li> <a id="category2Hover" href="#"> 정기배송 </a></li>
+                        <li> <a id="category2Hover" href="#"> 맞춤식단 </a></li>
+                        <li> <a id="category2Hover" href="#"> 샐러드 </a></li>
+                        <li> <a id="category2Hover" href="#"> 런치구독 </a></li>
+                        <li> <a id="category2Hover" href="#"> 샐럽위치/샌드위치 </a></li>
+                        <li> <a id="category2Hover" href="#"> 포케샐러드 </a></li>
+                        <li> <a id="category2Hover" href="#"> 간식/음료 </a></li>
+                    </ul>
+                </li>
+                <li> <a id="categoryBtn" href="#"> 맞춤식단 </a> </li>
+                <li> <a id="categoryBtn" href="#"> 정기배송 </a> </li>
+                <li> <a id="categoryBtn" href="#"> 베스트 </a> </li>
+                <li> <a id="categoryBtn" href="#"> 이벤트 </a> </li>
+                <li> <a id="categoryBtn" href="#"> 슬림쿡 런치 </a> </li>
+            </ul>
+            <div id="searchBox">
+                <input placeholder="검색어를 입력하세요." />
+                <img id="searchIcon" src="img/search_icon.png" />
+            </div>
+        </div>
+    </div>
+
+    <div id="contentWrap"> <!-- 본문 -->
+
+
+
+        <div id="signup">
+            <h3>회원정보 입력</h3>
+            <table>
+                <tr>
+                    <th><span class="colorRed">* </span>이름</th>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <th><span class="colorRed">* </span>아이디</th>
+                    <td><input type="text"><button>중복확인</button></td>
+                </tr>
+                <tr>
+                    <th><span class="colorRed">* </span>비밀번호</th>
+                    <td><input type="password"><span style="opacity: 70%; font-size: smaller;">* 영문 대소문자/숫자/특수문자를 혼용하여
+                            2종류
+                            10~16자 또는 3종류
+                            8~16자</span>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="colorRed">* </span>비밀번호 확인</th>
+                    <td><input type="password"></td>
+                </tr>
+                <tr>
+                    <th><span class="colorRed">* </span>생년월일</th>
+                    <td>
+                        <select id="jsYears">
+                        </select>
+                        년
+                        <select id="jsMonths">
+                        </select>
+                        월
+                        <select id="jsDays">
+                        </select>
+                        일
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="colorRed">* </span>성별</th>
+                    <td>
+                        <div class="alignRow">
+                            <label>
+                                <input type="radio" name="gender">
+                                선택 안함
+                            </label>
+                            <label>
+                                <input type="radio" name="gender">
+                                남
+                            </label>
+                            <label>
+                                <input type="radio" name="gender">
+                                여
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="colorRed">* </span>우편번호</th>
+                    <td>
+                        <input type="text" class="smaller" readonly>
+                        <button type="button">우편번호검색</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="colorRed">* </span>집주소</th>
+                    <td>
+                        <input type="text" class="larger" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="colorRed">* </span>상세주소</th>
+                    <td>
+                        <input type="text" class="larger">
+                        <label>
+                            <input type="checkbox" name="" id="">
+                            기본 배송지로 저장
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="colorRed">* </span>이메일</th>
+                    <td>
+                        <input type="text">
+                        @
+                        <input type="text">
+                        <select class="emailbox">
+                            <option>직접입력</option>
+                            <option>naver.com</option>
+                            <option>hanmail.net</option>
+                            <option>gmail.com</option>
+                            <option>nate.com</option>
+                            <option>yahoo.com</option>
+                        </select>
+                        <button>이메일 중복확인</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="colorRed">* </span>휴대폰</th>
+                    <td>
+                        <select>
+                            <option>선택</option>
+                            <option>010</option>
+                            <option>011</option>
+                            <option>016</option>
+                            <option>017</option>
+                            <option>018</option>
+                            <option>019</option>
+                        </select>
+                        -
+                        <input type="text">
+                        -
+                        <input type="text">
+
+                    </td>
+                </tr>
+                <tr>
+                    <th><span class="colorRed">* </span>추천인</th>
+                    <td>
+                        <input type="text">
+                        <button type="button" class="searchBtn">추천인 아이디 검색</button>
+                    </td>
+                </tr>
+            </table>
+
+            <div id="chkwrap">
+                <div class="allchk">
+                    <label>
+                        <input type="checkbox">전체동의
+                    </label>
+                </div>
+
+                <div class="partchk">
+                    <div class="chktop">
+                        <label>
+                            <input type="checkbox">이용약관
+                            <button>내용보기</button>
+                        </label>
+                        <label>
+                            <input type="checkbox">이용약관
+                            <button>내용보기</button>
+                        </label>
+
+                    </div>
+                    <div class="chkbottom">
+                        <label>
+                            <input type="checkbox">마케팅 수신동의
+                        </label>
+                        (
+                        <label>
+                            <input type="checkbox">이메일
+                        </label>
+                        <label>
+                            <input type="checkbox">SMS
+                        </label>
+                        )
+                        <div class="smallfont">
+                            <p>쇼핑몰에서 제공하는 신상품 소식/ 할인쿠폰을 무상으로 보내드립니다!</p>
+                            <p>제공 동의를 하지 않으셔도 서비스 이용에는 문제가 없습니다.</p>
+                            <p><b>단, 상품 구매 정보는 수신동의 여부 관계없이 발송됩니다.</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="finSignup">
+                <button class="bigButton">동의하고 가입완료</button>
+            </div>
+            <div id="privacyinfo">
+                <h4>이용약관</h4>
+                <textarea readonly id="textAreaInput"></textarea>
+                <div id="tableSetting">
+                    <h4>개인정보 수집·이용 (필수)</h4>
+                    <table>
+                        <tr>
+                            <th style="width:15%">구분</th>
+                            <th style="width:25%">목적</th>
+                            <th style="width:25%">항목</th>
+                            <th style="width:35%">보유기간</th>
+                        </tr>
+                        <tr>
+                            <th>필수정보</th>
+                            <td>회원제 서비스 이용 / 본인확인</td>
+                            <td>이름, 아이디, 비밀번호, 이메일, 생년월일,<br />성별, 주소, 휴대 전화</td>
+                            <td><b>회원 탈퇴 후 즉시</b></td>
+                        </tr>
+                    </table>
+
+                    <h4>개인정보 수집·이용 (선택)</h4>
+                    <table>
+                        <tr>
+                            <th style="width:15%">구분</th>
+                            <th style="width:25%">목적</th>
+                            <th style="width:25%">항목</th>
+                            <th style="width:35%">보유기간</th>
+                        </tr>
+                        <tr>
+                            <th>선택정보</th>
+                            <td>마케팅 활용(이벤트, 맞춤형 광고)</td>
+                            <td>휴대폰, 이메일, 쿠키정보</td>
+                            <td><b>회원 탈퇴 후 즉시</b></td>
+                        </tr>
+                    </table>
+                    <br />
+                    <p class="smallfont">귀하께서는 쇼핑몰에서 위와 같이 수집하는 개인정보에 대해, 동의하지 않거나 개인정보를 기재하지 않음으로써 거부할 수 있습니다.
+                        <br /><b>다만, 이때 회원에게 제공되는 서비스가 제한될 수 있습니다.</b>
+                    </p><br /><br /><br /><br /><br />
+                </div>
+            </div>
+            <br /><br /><br />
+        </div>
+
+        <div id="footer"> <!-- 푸터 -->
+            <div id="topFooter">
+                <div id="topftcontent">
+                    <div id="ftLeft">
+                        <div id="ftNotice">
+                            <h3> NOTICE </h3>
+                            <a href="#"> 더보기 </a>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="#"> [이벤트] 슬림쿡 런치 특급할인 이벤트 </a>
+                                <p> 2024-04-17 </p>
+                            </li>
+                            <li>
+                                <a href="#"> [이벤트] 신규혜택 첫구매 100원 안내 </a>
+                                <p> 2023-12-18 </p>
+                            </li>
+                            <li>
+                                <a id="imporNotice" href="#"> [이벤트] 슬림쿡 리뷰 이벤트 안내 </a>
+                                <p> 2023-09-04 </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="ftright">
+                        <div id="ftCS">
+                            <h3> CS CENTER </h3>
+                            <h3 id="centerNum"> 1600-3413 </h3>
+                            <p> 평일 10:00 ~ 17:00 <br />
+                                점심시간 13:00 ~ 14:00 <br />
+                                주말 및 공휴일 휴무
+                            </p>
+                            <div class="ftBtn"> <a id="ftBtna" href="#"> Q&A </a> </div>
+                            <div class="ftBtn"> <a id="ftBtna" href="#"> 1:1문의 </a> </div>
+                        </div>
+                        <div id="ftBank">
+                            <h3> BANK INFO</h3>
+                            <p>국민은행 793301-01-678439 <br />
+                                농　　협 301-0184-7928-01 <br />
+                                기업은행 123-159598-04-011 <br />
+                                예금주 : 옳은
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="bottomFooter">
+                <h3> 슬림쿡 - 일상에서 만나는 가벼움 </h3>
+                <p> <span class="bold">회사명</span> 주식회사 옳은 <span class="bold">대표</span> 배경진 <span class="bold">주소</span>
+                    서울 강남구
+                    봉은사로37길 7-9, 3F <br />
+                    <span class="bold">사업자번호</span> 318-87-00182 <a href="#">[사업자정보확인]</a> <span
+                        class="bold">통신판매번호</span>
+                    제2022-서울강남-05940호 <br />
+                    <span class="bold">마케팅제휴문의</span> mkt@oreun-corp.com <span class="bold">건강기능식품영업신고</span>
+                    제2017-0228115호(강남구청) <br />
+                    <span class="bold">대표전화</span> 1600-3413 (점심시간 13:00~14:00/주말, 공휴일 휴무) <span
+                        class="bold">개인정보보호책임자</span>
+                    김지영 <span class="bold">E-mail</span> <a href="#">help@oreun-corp.com</a>
+                </p>
+                <div id="ftInfo">
+                    <p>
+                        <a href="#"> 이용안내 </a> <span> | </span>
+                        <a href="#"> 개인정보처리방침 </a> <span> | </span>
+                        <a href="#"> 입점&제휴문의 </a> <span> | </span>
+                        <a href="#"> 공식블로그 </a>
+                    </p>
+                </div>
+                <p id="lastft"> Copyrightⓒ슬림쿡.All rights Reserved. </p>
+            </div>
+        </div> <!-- 푸터 end -->
+
+        <div id="popupKakao"> <!-- 팝업카카오상담 -->
+            <img src="img/consult_small_yellow_pc.png" />
+        </div> <!-- 팝업카카오상담 end -->
+</body>
+
+</html>

@@ -1,0 +1,719 @@
+/* 공통 CSS 설정 */
+/*=======================전체구역=======================*/
+* {
+    padding: 0px;
+    margin: 0px;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: 46433f;
+}
+
+/*=======================확인용=======================*/
+/* *{ border: 1px solid red;} */
+
+/*======================= 폰트 =======================*/
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Pretendard-Regular';
+    color: #46433f;
+}
+
+/*=======================레이아웃=======================*/
+#content {
+    width: 1100px;
+    margin: 0px auto;
+}
+
+
+/*======================= 헤더 =======================*/
+#skyEvent {
+    width: 100%;
+    background-color: #00865A;
+    padding: 14px 0px;
+}
+
+#skyEvent a {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#eventText {
+    text-align: center;
+}
+
+#xIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#topMenu {
+    width: 1100px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 25px;
+}
+
+#leftMenu {
+    display: flex;
+}
+
+#leftMenu>li {
+    padding: 0 15px 0 0;
+}
+
+#leftMenu>li>a {
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+#leftMenu>li {
+    position: relative;
+}
+
+#leftMenu .subMenu {
+    position: absolute;
+    top: 20px;
+    right: 12px;
+    background-color: white;
+    border: 1px solid #dbdbdb;
+    padding: 10px 0;
+    width: 110%;
+    text-align: center;
+    line-height: 190%;
+    display: none;
+    z-index: 2;
+}
+
+#leftMenu li:hover .subMenu {
+    display: block;
+}
+
+#rightMenu {
+    display: flex;
+}
+
+#rightMenu>li {
+    padding: 0 0 0 20px;
+}
+
+#rightMenu>li>a {
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+#blackBox {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 0px 8px;
+    border-radius: 10px;
+}
+
+#rightMenu li:hover #rightMenuhover {
+    color: #00865A;
+}
+
+#mainLogo {
+    margin: 0px auto;
+    width: 1100px;
+    text-align: center;
+    padding: 32.5px 0;
+}
+
+#logoImg {
+    width: 135px;
+}
+
+#mainMenu {
+    width: 100%;
+    margin: 0px auto;
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    border-bottom: 1px solid #dbdbdb;
+    z-index: 1;
+}
+
+#mainMenu2 li:hover #categoryBtn {
+    color: #00865A;
+    font-weight: bolder;
+}
+
+#mainMenu2 {
+    width: 1100px;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+#mainMenu2>ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#mainMenu2>ul>li>a {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#mainMenu2>ul>li {
+    padding-right: 90px;
+}
+
+#mainMenu2>ul>li>a {
+    height: 49px;
+}
+
+#topmenuIcon {
+    padding-right: 10px;
+    padding-top: 3px;
+}
+
+#mainMenu2 #category {
+    position: relative;
+}
+
+#category1 {
+    position: absolute;
+    top: 49px;
+    left: 0px;
+    width: 100%;
+    border-left: 1px solid #cfd0d1;
+    border-right: 1px solid #cfd0d1;
+    background-color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 300%;
+    letter-spacing: 1px;
+    padding: 20px 0;
+    padding-left: 20px;
+    display: none;
+}
+
+#category2 {
+    position: absolute;
+    left: 0px;
+    top: 200px;
+    width: 100%;
+    border-left: 1px solid #cfd0d1;
+    border-right: 1px solid #cfd0d1;
+    border-bottom: 1px solid #cfd0d1;
+    background-color: #f5f5f5;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 300%;
+    letter-spacing: 1px;
+    padding-left: 30px;
+    display: none;
+}
+
+#category1 li:hover #category1Hover {
+    color: #00865A;
+}
+
+#category2 li:hover #category2Hover {
+    color: #00865A;
+}
+
+#category:hover #category1 {
+    display: inline-block;
+}
+
+#category:hover #category2 {
+    display: inline-block;
+}
+
+#searchBox {
+    border: none;
+    width: 190px;
+    height: 34px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 8px;
+}
+
+#searchBox>input {
+    border: none;
+    background-color: #f2f2f2;
+    padding-left: 10px;
+}
+
+#searchIcon {
+    width: 15px;
+    position: absolute;
+    right: 7px;
+}
+
+*:focus {
+    outline: none;
+}
+
+#header {
+    width: 100%;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+/*======================= 푸터 =======================*/
+#footer {
+    width: 100%;
+    border-top: 1px solid #dbdbdb;
+    margin: 0 auto;
+}
+
+#topFooter {
+    background-color: #f2f2f2;
+}
+
+#ftLeft {
+    width: 55%;
+    padding-right: 50px;
+}
+
+#topftcontent {
+    width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+#ftNotice {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+#ftNotice>h3 {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#ftNotice>a {
+    font-size: 14px;
+    text-decoration: underline;
+    color: #7e7e7e;
+    margin-top: 5px;
+}
+
+#ftLeft>ul>li {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px;
+    border-bottom: 1px solid #dbdbdb;
+    padding-bottom: 10px;
+}
+
+#ftLeft>ul>li>a {
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+#ftLeft>ul>li>p {
+    font-size: 14px;
+    color: #7e7e7e;
+    letter-spacing: 1px;
+}
+
+#ftLeft a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+#imporNotice {
+    font-weight: bold;
+}
+
+#ftright {
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 50px;
+}
+
+#ftright h3 {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding-bottom: 20px;
+}
+
+#centerNum {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: rgb(0, 134, 90);
+}
+
+#ftright p {
+    font-size: 13px;
+    line-height: 200%;
+    letter-spacing: 2px;
+}
+
+.ftBtn {
+    display: inline-block;
+    background-color: #2e2e2e;
+    color: #fff;
+    width: 85px;
+    height: 30px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.ftBtn a {
+    color: #fff;
+    font-size: 14px;
+    padding: 10px;
+    line-height: 30px;
+}
+
+.ftBtn:hover #ftBtna {
+    text-decoration: underline;
+}
+
+#bottomFooter {
+    width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px 0;
+}
+
+#bottomFooter h3 {
+    font-size: 18px;
+    font-family: '고딕';
+    margin-bottom: 10px;
+    color: #2e2e2e;
+}
+
+#bottomFooter p {
+    color: #2e2e2e;
+    line-height: 180%;
+    letter-spacing: 1px;
+    font-size: 13px;
+}
+
+#bottomFooter span {
+    color: #46433f;
+    line-height: 180%;
+    letter-spacing: 1px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#ftInfo {
+    padding-top: 20px;
+}
+
+#ftInfo p a {
+    font-size: 13px;
+    color: #1c1c1c;
+    padding: 0 5px;
+}
+
+#bottomFooter>#lastft {
+    font-size: 14px;
+    color: #999999;
+}
+
+
+/*======================= 팝업 =======================*/
+#popupKakao {
+    position: fixed;
+    top: 88%;
+    right: 50px;
+    z-index: 2;
+}
+
+#popupMenu {
+    position: fixed;
+    top: 40%;
+    right: 50px;
+    z-index: 1;
+}
+
+#popupMenu>ul>li {
+    width: 97px;
+    height: 30px;
+    border: 1px solid #eeeeee;
+    background-color: #ffffff;
+    line-height: 220%;
+    text-align: center;
+
+}
+
+#popupMenu>ul>#first {
+    background-color: #00865A;
+    border: 1px solid #00865A;
+
+}
+
+#popupMenu>ul>#first>a {
+    color: white;
+}
+
+#contentWrap {
+    position: relative;
+    width: 100%;
+    margin: 0px auto;
+}
+
+#popupMenu img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid #dbdbdb;
+    margin-top: 20px;
+}
+
+
+/* ======== 장바구니 페이지 ======== */
+/* 페이지 너비 */
+#cart {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+#cart * {
+    font-size: 14px;
+}
+
+#cart .buySelect {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+#cart .buySelect1 {
+    padding: 30px;
+    align-self: center;
+    text-align: center;
+    font-size: 20px;
+    width: 100%;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    font-weight: bold;
+}
+
+#cart .buySelect2 {
+    align-self: flex-end;
+    margin-top: 45px;
+    margin-right: 5px;
+    margin-bottom: 20px;
+}
+
+#cart .buySelect2 a {
+    text-decoration: none;
+    color: grey;
+}
+
+#cart h3 {
+    margin-bottom: 5px;
+}
+
+#cart table {
+    width: 100%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+#cart table th,
+#cart table td {
+    padding: 10px;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+#cart table td {
+    border-bottom: 1px solid rgb(214, 214, 214);
+    border-top: 1px solid rgb(214, 214, 214);
+}
+
+#cart table img {
+    width: 100%;
+}
+
+#cart table p {
+    font-size: 14px;
+}
+
+#cart table p button {
+    width: 40px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding: 3px;
+    cursor: pointer;
+    margin: 3px;
+}
+
+#cart table p button:hover {
+    background-color: #00865A;
+    color: white;
+}
+
+#cart table td span {
+    color: red;
+}
+
+.layoutFlex {
+    display: flex;
+}
+
+.layoutFlex button {
+    width: 20px;
+    height: 20px;
+}
+
+.layoutFlex input {
+    width: 30px;
+    appearance: none;
+    margin: 0 3px;
+    text-align: center;
+    border: 1px solid grey;
+}
+
+#cart table .resizeBtn button {
+    width: 80px;
+    height: 25px;
+    margin: 2px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#cart table .resizeBtn button:hover {
+    background-color: #00865A;
+    color: white;
+}
+
+#cart table .resizeBtn2 button {
+    width: 30px;
+    height: 25px;
+    background-color: white;
+    border: 1px solid rgb(216, 216, 216);
+    cursor: pointer;
+}
+
+#cart table .resizeBtn2 button.rsz {
+    width: 50px;
+    height: 25px;
+    background-color: white;
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#cart .directGo {
+    display: inline-block;
+    width: 100%;
+    background-color: rgb(255, 208, 0);
+    font-size: 11px;
+    padding: 3px;
+    border-radius: 5px;
+    color: black;
+}
+
+#cart tr#lastTr>th.tdAlignRight {
+    text-align: right;
+    padding-right: 15px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+#cart tr#midTr>td.tdAlignRight {
+    text-align: right;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#cart table tr#midTr th,
+#cart table tr#midTr td {
+    padding: 10px 0;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+#cart table tr#lastTr th,
+#cart table tr#lastTr td {
+    padding: 15px 0;
+    border-top: solid 1px black;
+}
+
+#cart #cartButtonWrap {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+#cart #cartButtonWrap button {
+    width: 160px;
+    height: 60px;
+    margin: 5px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#cart #cartButtonWrap button:hover {
+    background-color: #00865A;
+    color: white;
+    font-weight: bold;
+}
+
+#cart #cartButtonWrap button#detailOrderBtn {
+    background-color: #00865A;
+    color: white;
+}
+
+#cart #easyPay {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+#cart #easyPay img {
+    margin: 5px;
+    cursor: pointer;
+}
+
+#cart #easyPay div:first-child {
+    padding-top: 2px;
+}
