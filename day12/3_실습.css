@@ -28,3 +28,8 @@
     width: 40%;
     margin-top: 30px;
 }
+
+#tableBox tr {
+    display: flex;
+    justify-content: space-between;
+}
