@@ -5,7 +5,6 @@ function add() {
     let todoInput = document.querySelector('#todoList');
 
     let todo = todoInput.value;
-
     todoList.push(todo);
     todoSwitch.push(0);
 
@@ -14,21 +13,17 @@ function add() {
     todoInput.value = null;
 
     print();
+    console.log(todoSwitch); // 콘솔 로그 테스트 // 콘솔 로그 테스트
 
 }
 
 
 function print(toggle, index) {
-
-    // let tableBox = document.querySelector('#tableBox'); console.log(tableBox);
-
-
     let html = ``;
 
     for (let i = 0; i < todoList.length; i++) {
         let currentTodo = todoList[i];
         if (toggle == 0) {
-
             html += `
                 <div class="willTodo">
                     <div>${currentTodo}</div>
@@ -42,7 +37,6 @@ function print(toggle, index) {
         }
         else {
             html += `
-
                 <div class="doneTodo">
                     <div>${currentTodo}</div>
                     <div>
@@ -50,23 +44,21 @@ function print(toggle, index) {
                         <button onclick="remove(${i})">삭제</button>
                     </div>   
                 </div>
-
             `;
             todoSwitch[index] = 0;
         }
-
     }
-
     tableBox.innerHTML = html;
+    console.log(todoSwitch); // 콘솔 로그 테스트 // 콘솔 로그 테스트
 }
 
 
 function remove(index) {
-
     todoList.splice(index, 1);
     todoSwitch.splice(index, 1);
-
+    console.log(todoSwitch); // 콘솔 로그 테스트 // 콘솔 로그 테스트
     print();
+    alert('삭제완료');
 
 }
 
@@ -75,8 +67,7 @@ function update(index) {
         print(0, index);
     }
     else { print(1, index); }
-
-
+    console.log(todoSwitch); // 콘솔 로그 테스트 // 콘솔 로그 테스트
 }
 
 
