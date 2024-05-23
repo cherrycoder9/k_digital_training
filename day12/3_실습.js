@@ -50,6 +50,7 @@ function print(toggle, index) {
                         <button onclick="remove(${i})">삭제</button>
                     </div>   
                 </div>
+
             `;
             todoSwitch[index] = 0;
         }

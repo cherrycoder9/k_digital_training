@@ -44,10 +44,10 @@
     justify-content: space-between;
 }
 
-tr .willTodo {
+.willTodo {
     background-color: yellow;
 }
 
-tr .doneTodo {
+.doneTodo {
     background-color: gray;
 }
