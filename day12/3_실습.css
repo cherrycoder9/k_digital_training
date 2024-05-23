@@ -13,13 +13,13 @@
 
 #inputBox input {
     width: 70%;
-    padding: 20px;
+    padding: 10px;
 }
 
 #inputBox button {
     display: flex;
-    width: 20%;
-    padding: 20px;
+    width: 30%;
+    padding: 10px;
     justify-content: center;
     align-items: center;
 }
@@ -32,22 +32,27 @@
 #tableBox {
     display: flex;
     flex-direction: column;
-}
-
-#tableBox tr {
-    display: flex;
-    justify-content: space-between;
+    width: 40%;
 }
 
 #tableBox div {
-    display: inline-block;
+    display: flex;
     justify-content: space-between;
+    padding: 5px;
 }
 
 .willTodo {
-    background-color: yellow;
+    background-color: beige;
 }
 
 .doneTodo {
-    background-color: gray;
+    background-color: rgb(178, 178, 178);
+}
+
+.doneTodo div:first-child {
+    text-decoration: line-through;
+}
+
+#tableBox button {
+    margin-left: 5px;
 }
