@@ -12,6 +12,7 @@ function add() {
 
     print();
 
+
 }
 
 
@@ -23,9 +24,11 @@ function print() {
 
         html += `
             <tr>
-                <td>${currentTodo}</td>
-                <td onclick="update(${i})"><button>변경</button></td>
-                <td onclick="remove(${i})"><button>삭제</button></td>
+                <div><td>${currentTodo}</td></div>
+                <div>
+                    <td onclick="update(${i})"><button>변경</button></td>
+                    <td onclick="remove(${i})"><button>삭제</button></td>
+                </div>   
             </tr>
         `;
     }
@@ -37,7 +40,6 @@ function print() {
 function remove(index) {
     todoList.splice(index, 1);
     print();
-
 
 }
 
