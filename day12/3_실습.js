@@ -9,7 +9,7 @@ function add() {
     todoList.push(todo);
     todoSwitch.push(0);
 
-    alert('항목 저장 성공');
+    alert('해야할일 추가 ');
 
     todoInput.value = null;
 
@@ -18,7 +18,7 @@ function add() {
 }
 
 
-function print(toggle) {
+function print(toggle, index) {
 
     // let tableBox = document.querySelector('#tableBox'); console.log(tableBox);
 
@@ -28,30 +28,30 @@ function print(toggle) {
     for (let i = 0; i < todoList.length; i++) {
         let currentTodo = todoList[i];
         if (toggle == 0) {
+
             html += `
-                <tr>
-                <td class="willTodo">
+                <div class="willTodo">
                     <div>${currentTodo}</div>
                     <div>
                         <button onclick="update(${i})">변경</button>
                         <button onclick="remove(${i})">삭제</button>
                     </div>   
-                    </td>
-                </tr>
+                </div>
                 `;
+            todoSwitch[index] = 1;
         }
         else {
             html += `
-            <tr>
-                <td class="doneTodo">
+
+                <div class="doneTodo">
                     <div>${currentTodo}</div>
                     <div>
                         <button onclick="update(${i})">변경</button>
                         <button onclick="remove(${i})">삭제</button>
                     </div>   
-                </td>
-            </tr>
+                </div>
             `;
+            todoSwitch[index] = 0;
         }
 
     }
@@ -63,15 +63,17 @@ function print(toggle) {
 function remove(index) {
 
     todoList.splice(index, 1);
+    todoSwitch.splice(index, 1);
+
     print();
 
 }
 
 function update(index) {
     if (todoSwitch[index] == 0) {
-        print(0);
+        print(0, index);
     }
-    else { print(1); }
+    else { print(1, index); }
 
 
 }
