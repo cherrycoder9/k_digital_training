@@ -120,6 +120,7 @@ function print() {
                 <td onclick="remove(${i})"><button>삭제</button></td>
             </tr>
         `;
+        // console.log(html);
     }
 
     // 3. 하단 부분: 총합계
@@ -133,7 +134,7 @@ function print() {
 
     // 3. 대입
     moneyTable.innerHTML = html;
-    console.log(html);
+    // console.log(html);
 }
 
 function remove(index) {
