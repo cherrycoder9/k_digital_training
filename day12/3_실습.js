@@ -11,6 +11,7 @@ function add() {
     alert('항목 저장 성공');
 
     print();
+
 }
 
 
@@ -33,7 +34,12 @@ function print() {
 
 }
 
+function remove(index) {
+    todoList.splice(index, 1);
+    print();
 
+
+}
 
 
 
