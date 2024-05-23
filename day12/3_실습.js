@@ -18,12 +18,11 @@ function add() {
 }
 
 
-function print(toggle, index) {
+function print(index) {
     let html = ``;
-
     for (let i = 0; i < todoList.length; i++) {
         let currentTodo = todoList[i];
-        if (toggle == 0) {
+        if (todoSwitch[i] == 0) {
             html += `
                 <div class="willTodo">
                     <div>${currentTodo}</div>
@@ -33,7 +32,6 @@ function print(toggle, index) {
                     </div>   
                 </div>
                 `;
-            todoSwitch[index] = 1;
         }
         else {
             html += `
@@ -45,7 +43,6 @@ function print(toggle, index) {
                     </div>   
                 </div>
             `;
-            todoSwitch[index] = 0;
         }
     }
     tableBox.innerHTML = html;
@@ -64,9 +61,10 @@ function remove(index) {
 
 function update(index) {
     if (todoSwitch[index] == 0) {
-        print(0, index);
+        todoSwitch[index] = 1;
+        print(index);
     }
-    else { print(1, index); }
+    else { todoSwitch[index] = 0; print(index); }
     console.log(todoSwitch); // 콘솔 로그 테스트 // 콘솔 로그 테스트
 }
 
