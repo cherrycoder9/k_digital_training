@@ -9,7 +9,7 @@ function add() {
     todoList.push(todo);
     todoSwitch.push(0);
 
-    alert('해야할일 추가 ');
+    alert('등록완료 ');
 
     todoInput.value = null;
 
