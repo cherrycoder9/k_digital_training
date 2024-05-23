@@ -10,6 +10,10 @@ function add() {
 
     alert('항목 저장 성공');
 
+    todoInput.value = null;
+
+
+
     print();
 
 
@@ -19,6 +23,9 @@ function add() {
 
 function print(toggle) {
 
+    let tableBox = document.querySelector('#tableBox'); console.log(tableBox);
+
+
 
     let html = ``;
 
@@ -27,23 +34,27 @@ function print(toggle) {
         if (toggle == 0) {
             html += `
                 <tr class="willTodo">
-                    <div><td>${currentTodo}</td></div>
+                <td>
+                    <div>${currentTodo}</div>
                     <div>
-                        <td onclick="update(${i})"><button>변경</button></td>
-                        <td onclick="remove(${i})"><button>삭제</button></td>
+                        <button onclick="update(${i})">변경</button>
+                        <button onclick="remove(${i})">삭제</button>
                     </div>   
+                    </td>
                 </tr>
                 `;
         }
         else {
             html += `
             <tr class="doneTodo">
-                <div><td>${currentTodo}</td></div>
-                <div>
-                    <td onclick="update(${i})"><button>변경</button></td>
-                    <td onclick="remove(${i})"><button>삭제</button></td>
-                </div>
-            </tr>
+                <td>
+                    <div>${currentTodo}</div>
+                    <div>
+                        <button onclick="update(${i})">변경</button>
+                        <button onclick="remove(${i})">삭제</button>
+                    </div>   
+                    </td>
+                </tr>
             `;
 
         }
@@ -55,6 +66,7 @@ function print(toggle) {
 
 
 function remove(index) {
+    console.log(`dsds`);
     todoList.splice(index, 1);
     print();
 
