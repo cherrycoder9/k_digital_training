@@ -8,10 +8,33 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'> -->
     <script src='1_실습.js' defer></script>
+    <style>
+        body>div {
+            display: flex;
+        }
+
+        body>div>div {
+            width: 50%;
+            border: 1px solid black;
+            padding: 50px;
+        }
+    </style>
 </head>
 
 <body>
-
+    <div>
+        <div>
+            <h3>회원가입</h3>
+            아이디: <input id="signupId" type="text"> <br />
+            패스워드: <input id="signupPw" type="text"> <br / </div>
+            <button onclick="signup()" type="button">회원가입</button>
+        </div>
+        <div>
+            <h3>로그인</h3>
+            아이디: <input id="loginId" type="text"> <br />
+            패스워드: <input id="loginPw" ype="text"> <br />
+            <button onclick="login()" type="button">로그인</button>
+        </div>
 </body>
 
 </html>
