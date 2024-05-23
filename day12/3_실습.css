@@ -29,7 +29,25 @@
     margin-top: 30px;
 }
 
+#tableBox {
+    display: flex;
+    flex-direction: column;
+}
+
 #tableBox tr {
     display: flex;
     justify-content: space-between;
+}
+
+#tableBox div {
+    display: inline-block;
+    justify-content: space-between;
+}
+
+.willTodo {
+    background-color: yellow;
+}
+
+.doneTodo {
+    background-color: gray;
 }
