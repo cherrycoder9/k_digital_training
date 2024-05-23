@@ -1,7 +1,0 @@
-function modify() {
-
-}
-
-function remove() {
-
-}
