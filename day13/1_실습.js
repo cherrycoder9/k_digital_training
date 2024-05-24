@@ -99,12 +99,57 @@ function _create() {
     console.log(boardList);
     // 5. 등록 성공
     alert('등록성공');
+    _allRead(); // 등록성공시 전체출력 함수 호출 
 }
+
+// 2. 전체출력 실행조건: 1. 페이지가 열렸을때(HTML실행->JS실행), 2. 데이터가 변화(수정/삭제/등록)가 있을때
+_allRead();
 function _allRead() {
-
+    // 1. 어디에
+    let tableBody = document.querySelector('#tableBody');
+    // 2. 무엇을
+    let html = '';
+    for (let i = 0; i < boardList.length; i++) {
+        // i 번째 게시물 반환 
+        let board = boardList[i];
+        console.log(board);
+        // 게시물의 정보 분류: 특정 문자 기준으로 분류 .split
+        let boardArray = board.split(',');
+        console.log(boardArray);
+        // 쉼표 기준으로 분류된 각 배열의 정보 
+        console.log(boardArray[0], boardArray[3], boardArray[4]);
+        html += `
+            <tr>
+                <td>${i}</td>
+                <td onclick="_read(${i})">${boardArray[0]}</td>
+                <td>${boardArray[3]}</td>
+                <td>${boardArray[4]}</td>
+            </tr>
+        `;
+    }
+    // 3. 출력/대입 
+    tableBody.innerHTML = html;
 }
-function _read() {
 
+// 3. 개별출력 실행조건: 1. 제목 클릭했을 때 
+function _read(index) {
+    let boardArray = boardList[index].split(',');
+    // 1. 어디에
+    let viewPage = document.querySelector('#viewPage');
+    // 2. 무엇을
+    let html = `
+        <h3>상세 페이지</h3>
+        <div>${boardArray[0]}</div>
+        <div>
+            <span>조회수: ${boardArray[4]}</span>
+            <span>작성일: ${boardArray[3]}</span>
+        </div>
+        <div>${boardArray[1]}</div>
+        <button>수정</button>
+        <button>삭제</button>
+    `;
+    // 3. 출력/대입
+    viewPage.innerHTML = html;
 }
 function _update() {
 
