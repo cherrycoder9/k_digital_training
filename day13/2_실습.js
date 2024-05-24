@@ -34,9 +34,9 @@ function menuPrint() { //주차칸 표시
     let html = '';
     for (let i = 0; i < 20; i++) {
         if (isParked == true) { //color2 주차되어있음
-            html += `<div id=parkSlot${i} class="parked" onclick="carIn(${i})" >${i + 1}</div>`;
+            html += `<div id="parkSlot${i}" class="parked" onclick="carIn(${i})" >${i + 1}</div>`;
         } else { //color1 주차 안 되어있음
-            html += `<div id=parkSlot${i} class="notparked" onclick="carIn(${i})" >${i + 1}</div>`;
+            html += `<div id="parkSlot${i}" class="notparked" onclick="carIn(${i})" >${i + 1}</div>`;
         }
     }
     document.querySelector('#parkWrap').innerHTML = html;
