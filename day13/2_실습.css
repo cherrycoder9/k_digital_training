@@ -58,3 +58,11 @@ div.parkSlot {
     text-align: center;
     align-content: center;
 }
+
+div.parked {
+    background-color: coral;
+}
+
+div.notparked {
+    background-color: white;
+}
