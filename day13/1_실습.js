@@ -131,7 +131,7 @@ function _allRead() {
     tableBody.innerHTML = html;
 }
 
-// 3. 개별출력 실행조건: 1. 제목 클릭했을 때 
+// 3. 개별출력 실행조건: (누구를=인덱스)1. 제목 클릭했을 때 
 function _read(index) {
     let boardArray = boardList[index].split(',');
     // 1. 어디에
@@ -145,15 +145,20 @@ function _read(index) {
             <span>작성일: ${boardArray[3]}</span>
         </div>
         <div>${boardArray[1]}</div>
-        <button>수정</button>
-        <button>삭제</button>
+        <button onclick="_update(${index})">수정</button>
+        <button onclick="_delete(${index})">삭제</button>
     `;
     // 3. 출력/대입
     viewPage.innerHTML = html;
 }
+
+// 4. 수정함수 실행조건: (누구를=인덱스)1. 수정버튼 클릭할때
 function _update() {
 
 }
-function _delete() {
 
+// 5. 삭제함수 실행조건: (누구를=인덱스)2. 삭제버튼 클릭할때 
+function _delete() {
+    // 배열 내 특정 인덱스 삭제 
+    boardList.splice(index, 1);
 }
