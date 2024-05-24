@@ -29,10 +29,10 @@ function menuPrint() { //주차칸 표시
     let unparked = '';
     let html = '';
     for (let i = 0; i < 20; i++) {
-        if (isParked == true) { //color1
-            html += `<div id=parkSlot${i} >${i + 1}</div>`;
-        } else { //color2
-            html += `<div id=parkSlot${i} >${i + 1}</div>`;
+        if (isParked == true) { //color2 주차되어있음
+            html += `<div id=parkSlot${i} class="parked">${i + 1}</div>`;
+        } else { //color1 주차 안 되어있음
+            html += `<div id=parkSlot${i} class="notparked">${i + 1}</div>`;
         }
     }
 
