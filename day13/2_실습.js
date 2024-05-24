@@ -1,10 +1,12 @@
-carTime = [, , , , , , , , , , , , , , , , , , ,]; //입차시간
+carTime = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //입차시간
 isParked = []; //입차여부
 for (i = 0; i < 20; i++) { //isParked = false X 20
     isParked.push(false);
 }
 console.log(isParked);
-carNum = [, , , , , , , , , , , , , , , , , , ,]; //주차된 차 번호
+carNum = ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']; //주차된 차 번호
+console.log(carNum);
+menuPrint();
 currentTime = ''; //현재시간
 
 
@@ -14,7 +16,7 @@ function carIn(x) { //입차
     currentTime = (currentTime.getHours() * 60) + currentTime.getMinutes(); console.log('currentTime2' + currentTime);
     console.log('carNum' + carNum);
     if (car == '') { message('차량 번호가 잘못되었습니다.'); }
-    else if (carNum.includes(car) == false && carNum[x] == undefined) {
+    else if (carNum.includes(car) == false && carNum[x] == '') {
         carNum[x] = car; isParked[x] = true; carTime[x] = currentTime; message('입차성공'); console.log('success');
     } else { message('입차불가, 차가 이미 존재합니다'); console.log('fail'); }
     console.log(carNum, isParked);
@@ -25,22 +27,24 @@ function carOut(x) { //출차
     let car = document.querySelector('#inputCar').value;
     let currentTime = new Date();
     let outTime = (currentTime.getHours() * 60) + currentTime.getMinutes(); // 분으로 환산된 현재시간
-    let cost = (carTime[x] - outTime) * 100;
+    let cost = Number((carTime[x] - outTime) * 100);
+    console.log('cost=', cost);
     if (carNum.includes(car) == true) {
-        message(`출차 완료되었습니다. 요금은 ₩${cost.toLocaleString('ko-KR')}원입니다`); carNum[x] = undefined;
+        message(`출차 완료되었습니다. 요금은 ₩${cost.toLocaleString('ko-KR')}원입니다`); carNum[x] = ''; isParked[x] = false;
     } else { message('차량번호가 잘못되었습니다'); }
-    menuPrint();
+    menuPrint(); console.log("carout", carNum, isParked);
 }
 
 function menuPrint() { //주차칸 표시
     let html = '';
     for (let i = 0; i < 20; i++) {
-        if (isParked == true) { //color2 주차되어있음
+        if (isParked[i] == true) { //color2 주차되어있음
             html += `<div id="parkSlot${i}" class="parked" onclick="carIn(${i})" >${i + 1}</div>`;
         } else { //color1 주차 안 되어있음
             html += `<div id="parkSlot${i}" class="notparked" onclick="carIn(${i})" >${i + 1}</div>`;
         }
     }
+    console.log('printed');
     document.querySelector('#parkWrap').innerHTML = html;
 }
 
