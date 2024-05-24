@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='2_실습.css'>
+    <script src='2_실습.js' defer></script>
+</head>
+
+<!-- 
+    기계식 주차장 시스템 웹 구현하기
+    요구사항
+        1. 주차할 수 있는 총 차량 대수는 20대
+        2. 입차시 차량번호를 입력하고 주차할 위치를 클릭해서 입차 등록
+            단, 해당 위치에 입차된 차량이 있으면 '입차불가' 없으면 '입차성공'
+        3. 출차시 차량번호를 입력받고 해당 차량 위치와 금액 안내 출력
+            단, 차량위치는 입차시 선택한 위치, 금액은 1분당 100원으로 계산
+    ============================
+    1. 요구사항 분석해서 설계
+        [백엔드]
+        1. 메모리 구조
+        2. 기능 구성
+        3. 기능 구현 로직 순서
+        [프론트엔드]
+        1. 레이아웃 구성해서 스케치하기, 프로토타입 
+        2. HTML 샘플
+    2. 구현 
+        * JS 샘플 데이터 등록 
+        * 샘플 데이터 등록
+        * 함수 구현
+    3. 연동
+    4. 테스트
+    5. 유지보수 
+-->
+
+<body>
+
+</body>
+
+</html>
+
+<!--  
+totalSlots: 총 주차 가능한 차량 대수. 예시: 20
+parkingSlots: 주차장 슬롯들을 나타내는 배열 또는 객체
+inputCarNumber: 차량 번호를 입력받는 인풋 요소
+buttonEnter: 입차 버튼 요소
+buttonExit: 출차 버튼 요소
+outputMessage: 사용자에게 메시지를 출력하는 요소
+
+slotAvailable: 주차 가능한 슬롯을 나타내는 클래스
+slotOccupied: 주차 중인 슬롯을 나타내는 클래스
+slotSelected: 사용자가 선택한 슬롯을 나타내는 클래스
+
+parkingData: 주차 정보 저장을 위한 객체
+currentTime: 현재 시간 (출차 시 주차 시간을 계산하기 위해 필요)
+carNumber: 입력받은 차량 번호
+selectedSlot: 선택된 주차 슬롯 번호
+entryTimes: 입차 시간 저장 객체
+-->
