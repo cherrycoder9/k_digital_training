@@ -67,14 +67,3 @@ function update(index) {
     else { todoSwitch[index] = 0; print(index); }
     console.log(todoSwitch); // 콘솔 로그 테스트 // 콘솔 로그 테스트
 }
-
-
-
-
-
-
-
-
-
-
-;;
