@@ -134,6 +134,9 @@ function _allRead() {
 // 3. 개별출력 실행조건: (누구를=인덱스)1. 제목 클릭했을 때 
 function _read(index) {
     let boardArray = boardList[index].split(',');
+    ++boardArray[4];
+    boardList[index] = boardArray.join();
+    _allRead();
     // 1. 어디에
     let viewPage = document.querySelector('#viewPage');
     // 2. 무엇을
@@ -153,12 +156,44 @@ function _read(index) {
 }
 
 // 4. 수정함수 실행조건: (누구를=인덱스)1. 수정버튼 클릭할때
-function _update() {
-
+function _update(index) {
+    if (_pwConfirm(index) == false) {
+        return;
+    }
+    // 배열 내 특정 데이터 수정
+    // 1. 해당 게시물 분류
+    let board = boardList[index].split(',');
+    // 새로운 제목과 내용을 입력받는다 
+    let utitle = prompt('수정할 제목');
+    let ucontent = prompt('수정할 내용');
+    // 수정된 정보로 구성: 새로운 제목과 내용만 수정 변수로 구성, 나머진 기존 데이터 사용
+    let uboard = `${utitle},${ucontent},${board[2]},${board[3]},${board[4]}`;
+    boardList[index] = uboard;
+    // 화면 새로고침 (재출력: 데이터 변화가 있기 때문에)
+    _allRead();
+    _read(index);
 }
 
 // 5. 삭제함수 실행조건: (누구를=인덱스)2. 삭제버튼 클릭할때 
-function _delete() {
+function _delete(index) {
+    if (_pwConfirm(index) == false) {
+        return;
+    }
     // 배열 내 특정 인덱스 삭제 
     boardList.splice(index, 1);
+    _allRead();
+    document.querySelector('#viewPage').innerHTML = '';
+}
+
+// 6. 비밀번호 검증 함수
+function _pwConfirm(index) {
+    // 패스워드 검증
+    // 1. 검증받을 패스워드를 입력바든ㄴ다
+    let confirmPw = prompt('비밀번호:');
+    // 2. 해당 인덱스의 비밀번호와 입력받은 비밀번호가 일치한지 체크 
+    if (confirmPw != boardList[index].split(',')[2]) {
+        alert('패스워드가 다릅니다.');
+        return false; // 패스워드 불일치
+    }
+    return true; // 패스워드 일치 
 }
