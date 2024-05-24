@@ -1,32 +1,60 @@
 /* 테스트용, 추후 삭제 */
-* {
+/* * {
     border: 1px solid black;
-}
+} */
 
 /* 공통 CSS 및 초기화 */
 body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* 전체 주차장 */
 div#parkWrap {
     display: flex;
-    flex-wrap: nowrap;
-
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
 }
 
 /* 각 주차구역 (총 20개) */
-div#parkSlot {
+div.parkSlot {
     display: flex;
-    width: 25%;
+    width: 21%;
     justify-content: center;
     align-items: center;
+    padding: 5px;
+    height: 30px;
+    border: 1px solid black;
 }
 
 /* 인풋박스 디자인 설정 */
-#inputCar {}
+#inputCar {
+    width: 200px;
+    height: 30px;
+    padding: 5px;
+}
 
 /* 출차버튼 디자인 설정 */
-#carOut {}
+#carOut {
+    width: 80px;
+    height: 30px;
+    cursor: pointer;
+    background-color: deepskyblue;
+}
+
+#carOut:hover {
+    background-color: dodgerblue;
+}
+
+#message {
+    width: 400px;
+    height: 40px;
+    text-align: center;
+    align-content: center;
+}
