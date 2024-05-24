@@ -33,7 +33,6 @@ function menuPrint() { //주차칸 표시
             html += `<div id=parkSlot${i} class="notparked">${i + 1}</div>`;
         }
     }
-
     document.querySelector('#parkWrap').innerHTML = html;
 }
 
