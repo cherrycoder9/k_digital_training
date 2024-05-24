@@ -1,1 +1,32 @@
-/*  */
+/* 테스트용, 추후 삭제 */
+* {
+    border: 1px solid black;
+}
+
+/* 공통 CSS 및 초기화 */
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* 전체 주차장 */
+div#parkWrap {
+    display: flex;
+    flex-wrap: nowrap;
+
+}
+
+/* 각 주차구역 (총 20개) */
+div#parkSlot {
+    display: flex;
+    width: 25%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 인풋박스 디자인 설정 */
+#inputCar {}
+
+/* 출차버튼 디자인 설정 */
+#carOut {}
