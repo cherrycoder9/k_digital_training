@@ -15,19 +15,14 @@ function carIn(x) { //입차
     let c = document.querySelector('#inputCar').value;
     let currentTime = new Date();
     currentTime = (currentTime.getHours() * 60) + currentTime.getMinutes();
-    let isDuplicate = false
-    for (let i = 0; i < car.length; i++) { //차량 이미 있는지 비교
-        if (car[i].carNum == c) {
-            message('입차불가, 차가 이미 존재합니다'); isDuplicate == true; break; //차량이 이미 있음
-        } else { isDuplicate == false; } // 차량이 없는 자리
-    }
     if (c == '') { message('차량 번호가 잘못되었습니다.'); } // 차량번호 빈칸 X
-    else if (isDuplicate == false) { // && 중복 차량번호 X
+    else if (car[x].carNum == c) { //차량 이미 있는지 비교
+        message('입차불가, 차가 이미 존재합니다'); //차량이 이미 있음
+    } else { // 차량이 없고 차량번호가 빈칸이 아님
         car[x].carNum = c; car[x].isParked = 1; car[x].carTime = Number(currentTime); message('입차성공');
     }
     menuPrint();
 }
-
 function carOut() { //출차
     let car = document.querySelector('#inputCar').value;
     let x = carNum.indexOf(car);
@@ -47,10 +42,10 @@ function carOut() { //출차
 
 function menuPrint() { //주차칸 표시
     let html = '';
-    for (let i = 0; i < 20; i++) {
-        if (isParked[i] == 1) { //color2 주차되어있음
+    for (let i = 0; i < car.length; i++) {
+        if (car[i].isParked == 1) { //color2; 주차되어있음
             html += `<div id="parkSlot${i}" class="parked" onclick="carIn(${i})" >${i + 1}</div>`;
-        } else { //color1 주차 안 되어있음
+        } else { //color1; 주차 안 되어있음
             html += `<div id="parkSlot${i}" class="notparked" onclick="carIn(${i})" >${i + 1}</div>`;
         }
     }
