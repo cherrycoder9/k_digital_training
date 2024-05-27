@@ -16,7 +16,7 @@ function carIn(x) { //입차
     let currentTime = new Date();
     currentTime = (currentTime.getHours() * 60) + currentTime.getMinutes();
     if (c == '') { message('차량 번호가 잘못되었습니다.'); } // 차량번호 빈칸 X
-    else if (car[x].carNum == c) { //차량 이미 있는지 비교
+    else if (car[x].isParked == 1) { //차량 이미 있는지 비교
         message('입차불가, 차가 이미 존재합니다'); //차량이 이미 있음
     } else { // 차량이 없고 차량번호가 빈칸이 아님
         car[x].carNum = c; car[x].isParked = 1; car[x].carTime = Number(currentTime); message('입차성공');
