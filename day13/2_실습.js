@@ -34,6 +34,12 @@ function carOut() { //출차
         }
     }
 
+    if (x == -1 || c == '') {
+        message('차량번호가 잘못되었습니다');
+        menuPrint();
+        return;
+    }
+
     let currentTime = new Date();
     let outTime = (currentTime.getHours() * 60) + currentTime.getMinutes(); // 분으로 환산된 현재시간
     ////console.log('outtime=', outTime, 'currentTime=', currentTime, 'cartime=', carTime[x]);
@@ -42,9 +48,8 @@ function carOut() { //출차
     ////console.log('cost1= ', cost);
     if (cost == 0) { cost += 100; }
     ////console.log('cost2 =', cost);
-    if (x != -1) {
-        message(`출차 완료되었습니다. 요금은 ₩${cost.toLocaleString('ko-KR')}원입니다`); car[x].carNum = ''; car[x].isParked = 0; car[x].carTime = 0;
-    } else { message('차량번호가 잘못되었습니다'); }
+    message(`출차 완료되었습니다. 요금은 ₩${cost.toLocaleString('ko-KR')}원입니다`); car[x].carNum = ''; car[x].isParked = 0; car[x].carTime = 0;
+
     menuPrint(); ////console.log("carout =", carNum, isParked, carTime);
 }
 
