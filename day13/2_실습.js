@@ -12,21 +12,19 @@ currentTime = ''; //현재시간
 
 
 function carIn(x) { //입차
-    let c = document.querySelector('#inputCar').value; //console.log('car' + car);
-    let currentTime = new Date(); //console.log('currentTime1=' + currentTime);
-
-    for (i = 0; i < car.length; i++) { //차량 이미 있는지 비교
-        if (car[i].carNum == c) (message('입차불가, 차가 이미 존재합니다'))
-        else if (car[i].carNum ==) 
+    let c = document.querySelector('#inputCar').value;
+    let currentTime = new Date();
+    currentTime = (currentTime.getHours() * 60) + currentTime.getMinutes();
+    let isDuplicate = false
+    for (let i = 0; i < car.length; i++) { //차량 이미 있는지 비교
+        if (car[i].carNum == c) {
+            message('입차불가, 차가 이미 존재합니다'); isDuplicate == true; break; //차량이 이미 있음
+        } else { isDuplicate == false; } // 차량이 없는 자리
     }
-    currentTime = (currentTime.getHours() * 60) + currentTime.getMinutes(); //console.log('currentTime2=' + currentTime);
-    ////console.log('carNum=' + carNum);
-    if (car == '') { message('차량 번호가 잘못되었습니다.'); }
-    else if (
-        carNum.includes(car) == false && carNum[x] == '') {
-        carNum[x] = car; isParked[x] = 1; carTime[x] = Number(currentTime); message('입차성공'); //console.log('success');
-    } else { message('입차불가, 차가 이미 존재합니다'); } //console.log('fail'); 
-    ////console.log('carinx=', carNum, isParked, carTime);
+    if (c == '') { message('차량 번호가 잘못되었습니다.'); } // 차량번호 빈칸 X
+    else if (isDuplicate == false) { // && 중복 차량번호 X
+        car[x].carNum = c; car[x].isParked = 1; car[x].carTime = Number(currentTime); message('입차성공');
+    }
     menuPrint();
 }
 
