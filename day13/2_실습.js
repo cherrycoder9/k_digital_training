@@ -3,18 +3,27 @@ isParked = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]; //입�
 //console.log(isParked);
 carNum = ['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']; //주차된 차 번호
 //console.log(carNum);
+car = []
+for (i = 0; i < 20; i++) { // car 배열 20칸
+    car.push({ carTime: 0, isParked: 0, carNum: '' })
+}
 menuPrint();
 currentTime = ''; //현재시간
 
 
 function carIn(x) { //입차
-    let car = document.querySelector('#inputCar').value; //console.log('car' + car);
+    let c = document.querySelector('#inputCar').value; //console.log('car' + car);
     let currentTime = new Date(); //console.log('currentTime1=' + currentTime);
 
+    for (i = 0; i < car.length; i++) { //차량 이미 있는지 비교
+        if (car[i].carNum == c) (message('입차불가, 차가 이미 존재합니다'))
+        else if (car[i].carNum ==) 
+    }
     currentTime = (currentTime.getHours() * 60) + currentTime.getMinutes(); //console.log('currentTime2=' + currentTime);
     ////console.log('carNum=' + carNum);
     if (car == '') { message('차량 번호가 잘못되었습니다.'); }
-    else if (carNum.includes(car) == false && carNum[x] == '') {
+    else if (
+        carNum.includes(car) == false && carNum[x] == '') {
         carNum[x] = car; isParked[x] = 1; carTime[x] = Number(currentTime); message('입차성공'); //console.log('success');
     } else { message('입차불가, 차가 이미 존재합니다'); } //console.log('fail'); 
     ////console.log('carinx=', carNum, isParked, carTime);
