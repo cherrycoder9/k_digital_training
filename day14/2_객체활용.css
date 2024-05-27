@@ -1,0 +1,14 @@
+table {
+    border-collapse: collapse;
+}
+
+th {
+    font-size: 15px;
+    font-weight: normal;
+    padding: 10px 30px;
+    border: 1px solid black;
+}
+
+table>tbody>tr:first-child {
+    background-color: rgb(231, 197, 151);
+}
