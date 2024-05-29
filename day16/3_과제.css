@@ -1,0 +1,31 @@
+/* CSS 초기화 */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#caltop {
+    display: flex;
+}
+
+#calendar {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#calendar>div {
+    width: 14%;
+    height: 100px;
+    border: 1px solid rgb(224, 221, 221);
+}
