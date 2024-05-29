@@ -4,6 +4,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    border: 1px solid black;
 }
 
 li {
@@ -15,17 +16,43 @@ a {
     color: black;
 }
 
-#caltop {
+#wrap,
+#calwrap {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#caltop,
+h3 {
+    display: flex;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+h5 {
+    width: 150px;
+    text-align: center;
+}
+
+#addWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 
 #calendar {
     display: flex;
     flex-wrap: wrap;
+    width: 1200px;
 }
 
 #calendar>div {
     width: 14%;
-    height: 100px;
+    height: 90px;
     border: 1px solid rgb(224, 221, 221);
 }
