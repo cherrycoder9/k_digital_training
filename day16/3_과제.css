@@ -57,8 +57,10 @@ h5 {
     border: 1px solid rgb(224, 221, 221);
     padding: 3px;
     overflow: auto;
+    margin-bottom: 2px;
 }
 
 #calendar>div>div {
     padding: 3px;
+    margin-top: 1px;
 }
