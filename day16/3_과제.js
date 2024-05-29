@@ -20,11 +20,11 @@ let month = currentDate.getMonth() + 1;
 
 // 2. 객체1개 <--> 일정1개,     배열1개 <--> 여러개 일정(객체)
 let contentList = [
-    { content: '대출받기', date: '2024-5-5', color: 'blue' },
+    { content: '대출받기', date: '2024-5-5', color: '#3AB77A' },
     { content: '수학공부', date: '2024-5-10', color: 'cornflowerblue' },
-    { content: '학원방문', date: '2024-5-12', color: 'red' },
+    { content: '학원방문', date: '2024-5-12', color: '#F03E37' },
     { content: '책보기', date: '2024-5-13', color: 'darkkhaki' },
-    { content: '코인투자', date: '2024-5-21', color: 'green' },
+    { content: '코인투자', date: '2024-5-21', color: '#B5BBC7' },
     { content: '코딩하기', date: '2024-5-21', color: 'yellow' },
     { content: '산책하기', date: '2024-5-21', color: 'orange' },
     { content: '스터디카페 청소', date: '2024-5-28', color: 'aquamarine' },
