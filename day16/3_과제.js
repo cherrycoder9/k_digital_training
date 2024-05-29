@@ -17,17 +17,17 @@ console.log(new Date().getDay());
 let currentDate = new Date();
 let year = currentDate.getFullYear();
 let month = currentDate.getMonth() + 1;
-
+let currentIndex = 7;
 // 2. 객체1개 <--> 일정1개,     배열1개 <--> 여러개 일정(객체)
 let contentList = [
-    { content: '대출받기', date: '2024-5-5', color: '#3AB77A' },
-    { content: '수학공부', date: '2024-5-10', color: 'cornflowerblue' },
-    { content: '학원방문', date: '2024-5-12', color: '#F03E37' },
-    { content: '책보기', date: '2024-5-13', color: 'darkkhaki' },
-    { content: '코인투자', date: '2024-5-21', color: '#B5BBC7' },
-    { content: '코딩하기', date: '2024-5-21', color: 'yellow' },
-    { content: '산책하기', date: '2024-5-21', color: 'orange' },
-    { content: '스터디카페 청소', date: '2024-5-28', color: 'aquamarine' },
+    { content: '대출받기', date: '2024-5-5', color: '#3AB77A', indexNum: 0 },
+    { content: '수학공부', date: '2024-5-10', color: 'cornflowerblue', indexNum: 1 },
+    { content: '학원방문', date: '2024-5-12', color: '#F03E37', indexNum: 2 },
+    { content: '책보기', date: '2024-5-13', color: 'darkkhaki', indexNum: 3 },
+    { content: '코인투자', date: '2024-5-21', color: '#B5BBC7', indexNum: 4 },
+    { content: '코딩하기', date: '2024-5-21', color: 'yellow', indexNum: 5 },
+    { content: '산책하기', date: '2024-5-21', color: 'orange', indexNum: 6 },
+    { content: '스터디카페 청소', date: '2024-5-28', color: 'aquamarine', indexNum: 7 },
 ];
 
 
@@ -57,7 +57,7 @@ function calPrint() {
     // 2. year, month 변수에 저장된 날짜의 1일 요일 구하기 (1일 요일 앞에 공백)
     let date2 = new Date(year, month - 1, 1);
     let startWeek = date2.getDay();
-    console.log(startWeek); // 일요일 0부터 시작함, 월1 화2
+    // console.log(startWeek); // 일요일 0부터 시작함, 월1 화2
     // 1일의 요일까지 공백 출력 반복문 
     for (let b = 1; b <= startWeek; b++) {
         html += `<div></div>`;
@@ -74,7 +74,7 @@ function calPrint() {
             // console.log(contentList[i]);
             // console.log(contentList[i].date == date3);
             if (contentList[i].date == date3) {
-                dayHtml += `<div style="background-color: ${contentList[i].color}">${contentList[i].content}</div>`;
+                dayHtml += `<div style="background-color: ${contentList[i].color}">${contentList[i].content}<button onclick="삭제하기(${contentList[i].indexNum})">삭제</button></div>`;
             }
         }
         html += `<div><b>${day}</b> ${dayHtml}</div>`;
@@ -109,6 +109,7 @@ function monthChange(매개변수) {
 }
 
 function 등록하기() {
+    ++currentIndex;
     let 입력색상 = document.querySelector('#inputColor').value;
     let 입력날짜 = document.querySelector('#inputDate').value;
     let 입력할일 = document.querySelector('#inputTodo').value;
@@ -116,9 +117,23 @@ function 등록하기() {
     let 입력년 = String(Number(입력날짜.split('-')[0]));
     let 입력월 = String(Number(입력날짜.split('-')[1]));
     let 입력일 = String(Number(입력날짜.split('-')[2]));
-    contentList.push({ content: 입력할일, date: `${입력년}-${입력월}-${입력일}`, color: 입력색상 });
-    console.log(입력색상);
-    console.log(입력날짜);
-    console.log(입력할일);
+    contentList.push({ content: 입력할일, date: `${입력년}-${입력월}-${입력일}`, color: 입력색상, indexNum: currentIndex });
+    // console.log(입력색상);
+    // console.log(입력날짜);
+    // console.log(입력할일);
     calPrint();
 };
+
+function 삭제하기(번호) {
+    for (let i = 0; i < contentList.length; i++) {
+        console.log(contentList);
+        console.log(contentList[i].indexNum);
+        console.log(번호);
+        // break;
+        if (contentList[i].indexNum == 번호) {
+            // delete contentList[i];
+            contentList.splice(contentList.indexOf(contentList[i].indexNum), 1);
+        }
+    }
+    calPrint();
+}
