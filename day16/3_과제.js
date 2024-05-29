@@ -20,14 +20,14 @@ let month = currentDate.getMonth() + 1;
 let currentIndex = 7;
 // 2. 객체1개 <--> 일정1개,     배열1개 <--> 여러개 일정(객체)
 let contentList = [
-    { content: '대출받기', date: '2024-5-5', color: '#3AB77A', indexNum: 0 },
-    { content: '수학공부', date: '2024-5-10', color: 'cornflowerblue', indexNum: 1 },
-    { content: '학원방문', date: '2024-5-12', color: '#F03E37', indexNum: 2 },
-    { content: '책보기', date: '2024-5-13', color: 'darkkhaki', indexNum: 3 },
-    { content: '코인투자', date: '2024-5-21', color: '#B5BBC7', indexNum: 4 },
-    { content: '코딩하기', date: '2024-5-21', color: 'yellow', indexNum: 5 },
-    { content: '산책하기', date: '2024-5-21', color: 'orange', indexNum: 6 },
-    { content: '스터디카페 청소', date: '2024-5-28', color: 'aquamarine', indexNum: 7 },
+    { content: '대출받기', date: '2024-5-5', color: '#3AB77A', cIndex: 0 },
+    { content: '수학공부', date: '2024-5-10', color: 'cornflowerblue', cIndex: 1 },
+    { content: '학원방문', date: '2024-5-12', color: '#F03E37', cIndex: 2 },
+    { content: '책보기', date: '2024-5-13', color: 'darkkhaki', cIndex: 3 },
+    { content: '코인투자', date: '2024-5-21', color: '#B5BBC7', cIndex: 4 },
+    { content: '코딩하기', date: '2024-5-21', color: 'yellow', cIndex: 5 },
+    { content: '산책하기', date: '2024-5-21', color: 'orange', cIndex: 6 },
+    { content: '스터디카페 청소', date: '2024-5-28', color: 'aquamarine', cIndex: 7 },
 ];
 
 
@@ -74,7 +74,7 @@ function calPrint() {
             // console.log(contentList[i]);
             // console.log(contentList[i].date == date3);
             if (contentList[i].date == date3) {
-                dayHtml += `<div style="background-color: ${contentList[i].color}">${contentList[i].content}<button onclick="삭제하기(${contentList[i].indexNum})">삭제</button></div>`;
+                dayHtml += `<div style="background-color: ${contentList[i].color}">${contentList[i].content}<button onclick="삭제하기(${contentList[i].cIndex})">삭제</button></div>`;
             }
         }
         html += `<div><b>${day}</b> ${dayHtml}</div>`;
@@ -117,22 +117,19 @@ function 등록하기() {
     let 입력년 = String(Number(입력날짜.split('-')[0]));
     let 입력월 = String(Number(입력날짜.split('-')[1]));
     let 입력일 = String(Number(입력날짜.split('-')[2]));
-    contentList.push({ content: 입력할일, date: `${입력년}-${입력월}-${입력일}`, color: 입력색상, indexNum: currentIndex });
+    contentList.push({ content: 입력할일, date: `${입력년}-${입력월}-${입력일}`, color: 입력색상, cIndex: currentIndex });
     // console.log(입력색상);
     // console.log(입력날짜);
     // console.log(입력할일);
     calPrint();
 };
 
-function 삭제하기(번호) {
+function 삭제하기(삭제번호) {
     for (let i = 0; i < contentList.length; i++) {
-        console.log(contentList);
-        console.log(contentList[i].indexNum);
-        console.log(번호);
-        // break;
-        if (contentList[i].indexNum == 번호) {
-            // delete contentList[i];
-            contentList.splice(contentList.indexOf(contentList[i].indexNum), 1);
+
+        if (삭제번호 == contentList[i].cIndex) {
+            let 삭제할인덱스 = i;
+            contentList.splice(i, 1);
         }
     }
     calPrint();
