@@ -126,9 +126,10 @@ function 등록하기() {
 
 function 삭제하기(삭제번호) {
     for (let i = 0; i < contentList.length; i++) {
-
         if (삭제번호 == contentList[i].cIndex) {
             let 삭제할인덱스 = i;
+            console.log(contentList[i].cIndex);
+            console.log(삭제할인덱스);
             contentList.splice(i, 1);
         }
     }
