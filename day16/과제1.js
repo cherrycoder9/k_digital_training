@@ -29,13 +29,13 @@ function 로그인() {
     let infoMsg = '';
 
     for (let i = 0; i < 회원정보.length; i++) {
-        if (loginID == 회원정보[i].아이디 && loginPW == 회원정보[i].패스워드) {
+        if (loginID == 회원정보[i].아이디 && loginPW == 회원정보[i].비밀번호) {
             infoMsg = '로그인 성공했습니다.';
             document.querySelector('#infoMsg').innerHTML = infoMsg;
             document.querySelector('#loginID').value = '';
             document.querySelector('#loginPW').value = '';
             return;
-        } else if (loginID == 회원정보[i].아이디 && loginPW != 회원정보[i].패스워드) {
+        } else if (loginID == 회원정보[i].아이디 && loginPW != 회원정보[i].비밀번호) {
             infoMsg = '비밀번호가 다릅니다.';
             document.querySelector('#infoMsg').innerHTML = infoMsg;
             document.querySelector('#loginID').value = '';
