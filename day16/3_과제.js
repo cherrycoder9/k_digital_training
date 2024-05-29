@@ -77,7 +77,7 @@ function calPrint() {
                 dayHtml += `<div style="background-color: ${contentList[i].color}">${contentList[i].content}</div>`;
             }
         }
-        html += `<div>${day} ${dayHtml}</div>`;
+        html += `<div><b>${day}</b> ${dayHtml}</div>`;
     }
     // 3. 출력 
     // 현재 day 출력과 day와 일치한 일정날짜의 일정내용 출력
