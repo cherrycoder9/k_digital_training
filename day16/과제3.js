@@ -21,15 +21,16 @@ function 화면갱신() {
     새년월표시 = `${달력.년}년 ${달력.월}월`;
 
     // 달에 맞는 일 출력
-    for (let i = 0; i < 달력.총일수 + 달력.시작요일 + 1; i++) {
-        if (i < 달력.시작요일) {
-            새달력출력 += `<div> </div>`;
-        } else if (i < 달력.총일수) {
-            새달력출력 += `<div>${i - 달력.시작요일 + 1}</div>`;
-        } else {
-            새달력출력 += `<div> </div>`;
-        }
+    // 이번달 시작요일만큼 빈 div 생성 
+    for (let i = 0; i < 달력.시작요일; i++) {
+        console.log(달력.시작요일);
+        새달력출력 += `<div></div>`;
     }
+    // 해당 월의 총일수만큼 출력
+    for (let i = 0; i < 달력.총일수; i++) {
+        새달력출력 += `<div>${i + 1}</div>`;
+    }
+
     document.querySelector('#displayDate').innerHTML = 새년월표시;
     document.querySelector('#refreshArea').innerHTML = 새달력출력;
 

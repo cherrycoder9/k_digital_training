@@ -45,7 +45,6 @@ body {
 .flexC {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     text-align: center;
     align-content: center;
