@@ -16,7 +16,7 @@ function 할일추가() {
     투두리스트화면갱신();
     document.querySelector('#inputTodo').value = "";
 }
-투두리스트화면갱신();
+
 function 투두리스트화면갱신() {
     let 할일리스트 = '';
     let localData = JSON.parse(localStorage.getItem('할일목록'));
