@@ -29,22 +29,22 @@
 
 // 1
 // localStorage.setItem('이름', '유재석');
-console.log(localStorage.getItem('이름'));
+console.log(localStorage.getItem("이름"));
 
 // sessionStorage.setItem('나이', '40');
-console.log(sessionStorage.getItem('나이'));
+console.log(sessionStorage.getItem("나이"));
 
 // 2. 
-localStorage.setItem('객체', { 이름: '유재석', 나이: '40' });
-console.log(localStorage.getItem('객체'));
+localStorage.setItem("객체", { 이름: "유재석", 나이: "40" });
+console.log(localStorage.getItem("객체"));
 
 // 3.
-console.log({ '이름': '유재석' });
-console.log(JSON.stringify({ '이름': '유재석' }));
+console.log({ "이름": "유재석" });
+console.log(JSON.stringify({ "이름": "유재석" }));
 
-console.log("{ '이름': '유재석' }");
+console.log('{ "이름": "유재석" }');
 console.log(JSON.parse('{ "이름": "유재석" }'));
 
 // 4. 
-localStorage.setItem('저장소', JSON.stringify({ 국어: 30, 영어: 50 }));
-console.log(JSON.parse(localStorage.getItem('저장소')));
+localStorage.setItem("저장소", JSON.stringify({ 국어: 30, 영어: 50 }));
+console.log(JSON.parse(localStorage.getItem("저장소")));
