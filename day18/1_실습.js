@@ -14,16 +14,15 @@ let 제품목록 = [
 // 1. 제품 등록 함수: 등록 버튼을 클릭했을때
 function 제품등록() {
     // !-------- localStorage 호출 --------
-
-
-
+    데이터최신화(2);
 
     // 1. 입력받은 값을 가져온다.
     let 제품명 = document.querySelector(`#제품명`).value;
     let 가격 = document.querySelector(`#가격`).value;
 
     // 2. 데이터를 가공(객체화)
-    let 제품번호 = 제품목록[제품목록.length - 1].제품번호 + 1; // 제품목록 배열의 마지막 인덱스에 번호++
+    // let 제품번호 = 제품목록[제품목록.length - 1].제품번호 + 1; // 제품목록 배열의 마지막 인덱스에 번호++
+    let 제품번호 = 제품목록.length - 1 >= 0 ? 제품목록[제품목록.length - 1].제품번호 + 1 : 1; // 마지막 주문번호에 +1, 마지막주문번호 = 마지막인덱스의 주문번호 = 배열.length-1
     let 제품 = { 제품번호: 제품번호, 제품명: 제품명, 가격: 가격 };
 
     // 3. [유효성검사]
@@ -34,9 +33,7 @@ function 제품등록() {
     alert(`제품등록 성공`);
 
     // !-------- localStorage 저장 --------
-
-
-
+    데이터최신화(1);
 
     제품출력();
 }
@@ -46,6 +43,7 @@ function 제품등록() {
 제품출력();
 function 제품출력() {
     // !-------- localStorage 호출 --------
+    데이터최신화(2);
 
     console.log(`제품출력()`);
     // 1. 어디에
@@ -76,12 +74,13 @@ let 주문목록 = [
 // 3. 주문: 주문 버튼을 클릭했을때 
 const 주문등록 = (제품번호) => {
     // !-------- localStorage 호출 --------
+    데이터최신화(4);
 
     console.log(`주문등록()`, 제품번호);
     // 1.
 
     // 2. 데이터 가공 (객체화: 저장을 어떤 형식으로 저장할지 구성)
-    let 주문번호 = 주문목록[주문목록.length - 1].주문번호 + 1; // 마지막 주문번호에 +1, 마지막주문번호 = 마지막인덱스의 주문번호 = 배열.length-1
+    let 주문번호 = 주문목록.length - 1 >= 0 ? 주문목록[주문목록.length - 1].주문번호 + 1 : 1; // 마지막 주문번호에 +1, 마지막주문번호 = 마지막인덱스의 주문번호 = 배열.length-1
     let date = new Date();
     let 주문일자 = `${date.getFullYear()}-${자릿수변환(date.getMonth() + 1)}-${자릿수변환(date.getDate())} `;
     주문일자 += `${자릿수변환(date.getHours())}:${자릿수변환(date.getMinutes())}`;
@@ -94,6 +93,7 @@ const 주문등록 = (제품번호) => {
     console.log(주문목록);
 
     // !-------- localStorage 저장 --------
+    데이터최신화(3);
 
 
     // 5. 주문버튼을 누르면 최종적으로 추가된 주문현황을 갱신
@@ -105,6 +105,7 @@ const 주문등록 = (제품번호) => {
 function 주문출력() {
 
     // !-------- localStorage 호출 --------
+    데이터최신화(4);
 
     // 1.
     let 주문출력구역 = document.querySelector(`#주문출력구역`);
@@ -160,38 +161,30 @@ function 자동주문() {
 // setItem: 1(제품목록)            3(주문목록)
 // getItem: 1(제품목록) 2(제품목록) 3(주문목록) 4(주문목록)
 function 데이터최신화(처리번호) {
-    // ================== 제품목록 ==================
-    // 2. 호출 localStorage.getItem(key);
-    제품목록 = JSON.parse(localStorage.getItem("productList"));
-    if (제품목록 == null) {
-        제품목록 = [];
-    }
-    // 1. 저장 localStorage.setItem(key, value);
-    localStorage.setItem("productList", JSON.stringify(제품목록));
-
-    // ================== 주문목록 ==================
-    주문목록 = JSON.parse(localStorage.getItem("orderList"));
-    if (주문목록 == null) {
-        주문목록 = [];
-    }
-    localStorage.setItem("orderList", JSON.stringify(주문목록));
-
-
     if (처리번호 == 1) {
-        // ================== 제품목록 ==================
-
+        // ================== 제품목록 저장 ==================
+        // 1. 저장 localStorage.setItem(key, value);
+        localStorage.setItem("productList", JSON.stringify(제품목록));
     } else if (처리번호 == 2) {
-
+        // ================== 제품목록 불러오기 ==================
+        // 2. 호출 localStorage.getItem(key);
+        제품목록 = JSON.parse(localStorage.getItem("productList"));
+        if (제품목록 == null) {
+            제품목록 = [];
+        }
     } else if (처리번호 == 3) {
-        // ================== 주문목록 ==================
+        // ================== 주문목록 저장 ==================
+        localStorage.setItem("orderList", JSON.stringify(주문목록));
 
     } else if (처리번호 == 4) {
-
+        // ================== 주문목록 불러오기 ==================
+        주문목록 = JSON.parse(localStorage.getItem("orderList"));
+        if (주문목록 == null) {
+            주문목록 = [];
+        }
     } else {
-
+        alert(`데이터 최신화 오류 `);
     }
-
-
 
     // 6-1 제품목록을 브라우저(프로그램)의 localStorage 저장
     // 6-2 제품목록을 브라우저(프로그램)의 localStorage 호출  
