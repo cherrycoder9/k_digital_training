@@ -29,7 +29,7 @@
                     <button type="button" onclick="제품등록()" class="btn btn-info">제품등록</button>
                 </form>
                 <br />
-                <button class="btn btn-danger">자동주문</button>
+                <button type="button" onclick="자동주문()" class="btn btn-danger">자동주문</button>
                 <br />
                 <table class="table">
                     <thead>
@@ -55,31 +55,8 @@
                             <th>주문일</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>코카콜라</td>
-                            <td>1000</td>
-                            <td>2024-05-25</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>사이다</td>
-                            <td>1500</td>
-                            <td>2024-05-27</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>펩시</td>
-                            <td>2000</td>
-                            <td>2024-05-28</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>피자</td>
-                            <td>4000</td>
-                            <td>2024-05-31</td>
-                        </tr>
+                    <tbody id="주문출력구역">
+
                     </tbody>
                 </table>
             </div>
