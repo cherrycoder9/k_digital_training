@@ -37,9 +37,9 @@ function 글등록하기() {
         contentList = [];
     }
     // 만약에 글목록에 글이 없으면 1, 있으면 마지막 글번호의 번호 + 1
-    let contentNo = contentList.length == 0 ? 1 : contentList[contentList.length - 1].no + 1;
+    let contentNo = contentList.length == 0 ? 1 : contentList[contentList.length - 1].번호 + 1;
     // 객체화 
-    let myContent = { 번호: contentNo, 제목: inputTitle, 내용: inputContent, 작성자: memberList[findIndex].id, 작성일: "", 조회수: 0 };
+    let myContent = { 번호: contentNo, 제목: inputTitle, 내용: inputContent, 작성자: memberList[findIndex].id, 작성일: writeDay, 조회수: 0 };
     // 저장
     contentList.push(myContent);
     console.log(contentList);
