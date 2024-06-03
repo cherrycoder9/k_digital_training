@@ -76,11 +76,12 @@ function signup() {
     }
     // 2. 유효성검사 - 5. 아이디와 연락처는 중복 제외 
     for (let i = 0; i < memberList.length; i++) {
-        memberList[i].id == inputID;
-        alert('회원가입 실패: 사용중인 아이디입니다.');
-        document.querySelector('#inputID').value = "";
-        document.querySelector('#inputID').focus();
-        return;
+        if (memberList[i].id == inputID) {
+            alert('회원가입 실패: 사용중인 아이디입니다.');
+            document.querySelector('#inputID').value = "";
+            document.querySelector('#inputID').focus();
+            return;
+        }
     }
     // 2. 유효성검사 - 5. 아이디와 연락처는 중복 제외 
     for (const member of memberList) {

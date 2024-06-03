@@ -44,24 +44,13 @@
         </div>
         <!-- 헤더 끝 -->
         <div id="main">
-            <h3>로그인</h3>
+            <h3>내정보</h3>
             <form>
-                아이디: <input id="loginInputID" type="text" /><br />
-                비밀번호: <input id="loginInputPW" type="text" /><br />
-                <button onclick="로그인하기()" type="button">로그인</button>
-
-                <a href="signup.html">회원가입</a>
-                <a href="find.html">아이디/비밀번호 찾기</a>
-                <!-- 
-                    find.html (signup.html 복사) 
-                    1. 아이디 찾기
-                        - 이름과 전화번호를 입력받아 일치한 정보 찾기 
-                        - 찾은 아이디를 특정한 div에 출력하시오. 
-                    2. 비밀번호 찾기 
-                        - 아이디와 연락처를 입력받아 일치한 정보 찾기 
-                        - 찾은 비밀번호를 특정 div에 출력하시오.
-                -->
-
+                아이디: <div id="myid"></div>
+                이름: <div id="myname"></div>
+                연락처: <div id="myphone"></div>
+                <button onclick="회원탈퇴()" type="button">회원탈퇴</button>
+                <button onclick="update()" type="button">비밀번호수정</button>
             </form>
         </div>
     </div>
@@ -71,7 +60,7 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src='index.js'></script>
-    <script src='login.js'></script>
+    <script src='info.js'></script>
 </body>
 
 </html>
