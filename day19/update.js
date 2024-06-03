@@ -17,6 +17,15 @@ function changePW() {
     let newPW = document.querySelector('#newPW').value;
     let newPWr = document.querySelector('#newPWr').value;
 
+    if (newPW.length < 5 || newPWr.length < 5) {
+        alert('새로운 비밀번호는 5글자 이상으로 해주세요.');
+        return;
+    }
+    if (newPW != newPWr) {
+        alert('비밀번호와 비밀번호 확인이 일치하지 않습니다.');
+        return;
+    }
+
     // 세션 저장소에서 loginNo 받아오기
     // sessionStorage.getItem('loginNo');
     let loginNo = sessionStorage.getItem('loginNo');
@@ -43,21 +52,14 @@ function changePW() {
         return;
     }
 
-    if (newPW.length < 5 || newPWr.length < 5) {
-        alert('새로운 비밀번호는 5글자 이상으로 해주세요.');
-        return;
-    }
-    if (newPW != newPWr) {
-        alert('비밀번호와 비밀번호 확인이 일치하지 않습니다.');
-        return;
-    }
+
 
     // 수정처리 
     // 누구를 [findIndex]
     memberList[findIndex].pw = newPW;
     // 로컬스토리지에 다시 저장
     localStorage.setItem('회원가입리스트', JSON.stringify(memberList));
-    sessionStorage.clear('loginNo');
+    sessionStorage.removeItem('loginNo');
 
     // 4. 안내후 로그아웃
     alert('비밀번호가 수정되었습니다. 다시 로그인 해주세요.');
