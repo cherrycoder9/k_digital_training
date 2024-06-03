@@ -29,10 +29,10 @@ function 글등록하기() {
     let day = date.getDate();
     day = day < 10 ? ('0' + day) : day;
     let writeDay = `${year}-${month}-${day}`;
-    console.log(year, month, day);
+    console.log(writeDay);
 
     // 글 번호 부여하기
-    contentList = localStorage.getItem('글목록');
+    contentList = JSON.parse(localStorage.getItem('글목록'));
     if (contentList == null) {
         contentList = [];
     }
@@ -47,7 +47,7 @@ function 글등록하기() {
     // 로컬 스토리지에 저장하기
     localStorage.setItem('글목록', JSON.stringify(contentList));
     alert('글 등록이 완료되었습니다.');
-    // location.href = 'board.html';
+    location.href = 'board.html';
 
     // console.log(inputTitle);
     // console.log(inputContent);
