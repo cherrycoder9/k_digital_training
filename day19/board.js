@@ -24,12 +24,12 @@ function 글출력() {
         html += `
             <tr>    
                 <td>${contentList[i].번호}</td>
-                <td>${contentList[i].제목}</td>
+                <td><a href="view.html?no=${contentList[i].번호}">${contentList[i].제목}</a></td>
                 <td>${contentList[i].작성자}</td>
                 <td>${contentList[i].작성일}</td>
                 <td>${contentList[i].조회수}</td>
             </tr>
-            `;
+        `;
     }
     document.querySelector('#showContents').innerHTML = html;
 }

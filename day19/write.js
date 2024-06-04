@@ -8,6 +8,7 @@ function 글등록하기() {
 
     if (!inputTitle || !inputContent) {
         alert('제목과 내용을 모두 입력해주세요.');
+        document.querySelector('#inputTitle').focus();
         return;
     }
 
@@ -16,7 +17,7 @@ function 글등록하기() {
     if (memberList == null) {
         memberList = [];
     }
-    // 현재 로그인된 loginNo 불러오기
+    // 현재 로그인된 loginNo 불러와 작성자 id 구하기 위한 인덱스 찾기  
     let loginNo = sessionStorage.getItem('loginNo');
     let findIndex = 0;
     for (let i = 0; i < memberList.length; i++) {
