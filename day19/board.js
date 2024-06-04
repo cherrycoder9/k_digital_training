@@ -23,11 +23,11 @@ function 글출력() {
     for (let i = 0; i < contentList.length; i++) {
         html += `
             <tr>    
-                <td>${contentList[i].번호}</td >
-                <td>${contentList[i].제목}</td >
-                <td>${contentList[i].작성자}</td >
-                <td>${contentList[i].작성일}</td >
-                <td>${contentList[i].조회수}</td >
+                <td>${contentList[i].번호}</td>
+                <td>${contentList[i].제목}</td>
+                <td>${contentList[i].작성자}</td>
+                <td>${contentList[i].작성일}</td>
+                <td>${contentList[i].조회수}</td>
             </tr >
             `;
     }
