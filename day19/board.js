@@ -28,7 +28,7 @@ function 글출력() {
                 <td>${contentList[i].작성자}</td>
                 <td>${contentList[i].작성일}</td>
                 <td>${contentList[i].조회수}</td>
-            </tr >
+            </tr>
             `;
     }
     document.querySelector('#showContents').innerHTML = html;
