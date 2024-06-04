@@ -6,6 +6,11 @@ function 글등록하기() {
     let inputTitle = document.querySelector('#inputTitle').value;
     let inputContent = document.querySelector('#inputContent').value;
 
+    if (!inputTitle || !inputContent) {
+        alert('제목과 내용을 모두 입력해주세요.');
+        return;
+    }
+
     // 멤버리스트 불러오기
     memberList = JSON.parse(localStorage.getItem('회원가입리스트'));
     if (memberList == null) {
